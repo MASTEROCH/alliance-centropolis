@@ -348,6 +348,71 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .uprice{font-family:var(--disp);font-weight:800;font-size:34px;letter-spacing:-.03em;margin-top:14px;font-variant-numeric:tabular-nums}
 .uprice small{font-size:13px;color:var(--muted);font-weight:500;font-family:var(--sans)}
 
+/* ===== pick sub-modes: facade / floor ===== */
+.subseg{display:flex;gap:6px;margin-bottom:16px}
+.subseg button{flex:1;height:38px;border-radius:11px;background:var(--panel);border:1px solid var(--line);font-size:12.5px;
+  font-weight:600;color:var(--muted);box-shadow:var(--sh-sm);transition:.2s var(--ease)}
+.subseg button.on{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.subseg button:active{transform:scale(.95)}
+/* facade */
+.facade-wrap{border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--sh);
+  background:linear-gradient(180deg,#e6eef7 0%,#d3deec 62%,#c3d0e2 100%)}
+:root[data-theme=dark] .facade-wrap{background:linear-gradient(180deg,#1a2436 0%,#111a2b 62%,#0c1322 100%)}
+.facade-wrap svg{display:block;width:100%;height:auto}
+.win{cursor:pointer;transition:opacity .15s,transform .12s}
+.win:active{opacity:.6}
+.win.sold{cursor:default}
+.fac-body{fill:rgba(255,255,255,.5);stroke:rgba(0,0,0,.06)}
+:root[data-theme=dark] .fac-body{fill:rgba(255,255,255,.05);stroke:rgba(255,255,255,.08)}
+.fac-flr{fill:#8a93a4;font-family:var(--mono)}
+.fac-base{fill:rgba(10,14,22,.88)}
+.fac-lbl{fill:#fff;font-family:var(--sans)}
+.facade-legend{display:flex;justify-content:center;gap:16px;padding:12px 0 2px;flex-wrap:wrap}
+/* floor plan */
+.floor-nav{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:18px}
+.floor-nav button{width:46px;height:46px;flex:none;border-radius:50%;background:var(--panel);border:1px solid var(--line);
+  box-shadow:var(--sh-sm);display:grid;place-items:center;color:var(--ink);transition:.18s}
+.floor-nav button:active{transform:scale(.9)}
+.floor-nav button:disabled{opacity:.35}
+.floor-nav svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2.2}
+.floor-nav .fnum{text-align:center}
+.floor-nav .fnum b{font-family:var(--disp);font-weight:800;font-size:42px;line-height:1;font-variant-numeric:tabular-nums;display:block}
+.floor-nav .fnum small{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+.floor-units{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.funit{border-radius:15px;padding:15px 14px;border:1px solid var(--line);box-shadow:var(--sh-sm);cursor:pointer;transition:.18s var(--ease);position:relative}
+.funit:active{transform:scale(.96)}
+.funit.free{background:var(--red-soft);border-color:rgba(244,1,70,.2)}
+.funit.reserved{background:color-mix(in srgb,var(--gold-2) 14%,transparent);border-color:rgba(217,160,54,.3)}
+.funit.sold{background:var(--bg2);opacity:.55;cursor:default}
+.funit .fn{font-family:var(--disp);font-weight:800;font-size:19px;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.funit .fr{font-size:11px;color:var(--muted);margin-top:2px}
+.funit .fp{font-size:13.5px;font-weight:700;margin-top:9px;font-variant-numeric:tabular-nums;color:var(--ink)}
+.funit.free .fp{color:var(--red)}
+.funit .fsea{position:absolute;top:12px;right:12px;font-size:11px}
+/* ===== construction ===== */
+.cprog{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--sh);margin:0 var(--pad) 18px;position:relative}
+.cprog-top{display:flex;justify-content:space-between;align-items:flex-end}
+.cprog-top .pct{font-family:var(--disp);font-weight:800;font-size:48px;color:var(--red);line-height:.9;font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.cprog-top .pl{font-size:12px;color:var(--muted);text-align:right;max-width:11ch}
+.cbar{height:9px;border-radius:9px;background:var(--bg2);overflow:hidden;margin-top:16px}
+.cbar>i{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,var(--red),var(--red-2));
+  box-shadow:0 0 14px -2px var(--red-glow);transition:width 1s var(--ease)}
+.cstages{padding:0 var(--pad)}
+.cstage{display:flex;align-items:center;gap:14px;padding:15px 2px;border-bottom:1px solid var(--line)}
+.cstage .cdot{width:13px;height:13px;border-radius:50%;flex:none;position:relative}
+.cstage.done .cdot{background:var(--red)}
+.cstage.active .cdot{background:var(--gold-2);box-shadow:0 0 0 4px color-mix(in srgb,var(--gold-2) 24%,transparent)}
+.cstage.pending .cdot{background:var(--line-2)}
+.cstage .cname{flex:1}
+.cstage .cname b{font-size:14.5px;font-weight:600;display:block}
+.cstage .cname span{font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.cstage .cp{font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--muted);flex:none}
+.cstage.done .cp{color:var(--red)}.cstage.active .cp{color:var(--gold-2)}
+.cfeed{margin:22px var(--pad) 0}
+.cfeed-item{display:flex;gap:13px;padding:13px 0;border-bottom:1px solid var(--line)}
+.cfeed-item .fd{font-size:11px;font-weight:700;color:var(--red);font-variant-numeric:tabular-nums;flex:none;width:52px;line-height:1.4}
+.cfeed-item .ft{font-size:13.5px;line-height:1.4}
+
 </style>
 </head>
 <body>
@@ -434,14 +499,28 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
           <div id="aptList" class="stagger in"></div>
         </div>
         <div id="apt-pick" style="display:none">
-          <div class="wrap"><div class="sec-head" style="margin-bottom:16px"><div class="kick">Шахматка</div><h2>Выбор квартиры</h2>
-            <p>Все апартаменты по этажам. Цена рассчитана по этажу и виду. Нажмите свободную квартиру.</p></div>
-            <div class="pick-filters" id="pickFilters"></div>
-            <div class="legend" id="pickLegend"></div>
+          <div class="wrap">
+            <div class="sec-head" style="margin-bottom:14px"><div class="kick">Выбор квартиры</div><h2 id="pickTitle">Шахматка</h2>
+              <p id="pickDesc">Все апартаменты по этажам. Цена рассчитана по этажу и виду. Нажмите свободную.</p></div>
+            <div class="subseg" id="pickSub">
+              <button class="on" data-p="chess" onclick="pickMode('chess')">Шахматка</button>
+              <button data-p="facade" onclick="pickMode('facade')">Фасад</button>
+              <button data-p="floor" onclick="pickMode('floor')">Этаж</button>
+            </div>
           </div>
-          <div class="wrap"><div class="chess" id="chess"></div>
-            <div class="pick-summary"><div><b id="pickCount">—</b> <span id="pickCountLbl">свободно</span></div>
-              <div style="text-align:right"><b id="pickMin" style="color:var(--ink)">—</b> <span>цена от</span></div></div>
+          <div id="pick-chess">
+            <div class="wrap"><div class="pick-filters" id="pickFilters"></div><div class="legend" id="pickLegend"></div></div>
+            <div class="wrap"><div class="chess" id="chess"></div>
+              <div class="pick-summary"><div><b id="pickCount">—</b> <span id="pickCountLbl">свободно</span></div>
+                <div style="text-align:right"><b id="pickMin" style="color:var(--ink)">—</b> <span>цена от</span></div></div>
+            </div>
+          </div>
+          <div id="pick-facade" style="display:none">
+            <div class="wrap"><div class="facade-wrap" id="facadeWrap"></div>
+              <div class="facade-legend legend" id="facadeLegend"></div></div>
+          </div>
+          <div id="pick-floor" style="display:none">
+            <div class="wrap"><div class="floor-nav" id="floorNav"></div><div class="floor-units" id="floorUnits"></div></div>
           </div>
         </div>
       </div>
@@ -502,6 +581,17 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
           Демо на движке <b>Realty Preset</b> · данные и рендеры — centropolis.ge / alliance.ge · AppHub.</div>
       </div>
 
+      <!-- TAB: CONSTRUCTION -->
+      <div class="tabpanel" id="tab-construct">
+        <div class="wrap" style="padding-top:4px"><div class="sec-head"><div class="kick">Ход стройки</div><h2>Строится сейчас</h2>
+          <p>Готовность по этапам. На объекте — веб-камеры 24/7.</p></div></div>
+        <div class="cprog"><div class="cprog-top"><div class="pct" id="cPct">—</div><div class="pl">общая готовность комплекса</div></div>
+          <div class="cbar"><i id="cBar" style="width:0"></i></div></div>
+        <div class="cstages" id="cStages"></div>
+        <div class="wrap"><div class="sec-head" style="margin:28px 0 6px"><div class="kick">Хроника</div><h2 style="font-size:28px">Последние работы</h2></div></div>
+        <div class="cfeed" id="cFeed"></div>
+      </div>
+
     </div>
 
     <!-- BOTTOM NAV -->
@@ -510,8 +600,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
         <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-7h6v7"/></svg>Квартиры</button>
       <button class="navb" data-tab="infra" onclick="goTab('infra')">
         <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Инфра</button>
+      <button class="navb" data-tab="construct" onclick="goTab('construct')">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V3l11 3.4"/><path d="M16 6.4 20 7.6"/><path d="M16 6.4v3.2l-4 1.2"/><path d="M4 21h16"/></svg>Стройка</button>
       <button class="navb" data-tab="invest" onclick="goTab('invest')">
-        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M7 15l4-5 3 3 5-7"/></svg>Инвестиции</button>
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M7 15l4-5 3 3 5-7"/></svg>Инвест</button>
       <button class="navb" data-tab="contact" onclick="goTab('contact')">
         <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z"/></svg>Контакт</button>
     </nav>
@@ -609,6 +701,7 @@ function goTab(name){
   document.querySelectorAll('.tabpanel').forEach(p=>p.classList.toggle('on',p.id==='tab-'+name));
   document.querySelectorAll('.navb').forEach(b=>b.classList.toggle('on',b.dataset.tab===name));
   const p=document.getElementById('tab-'+name); if(p){ p.scrollTop=0; revealIn(p); }
+  if(name==='construct'&&!cRendered)renderConstruction();
 }
 
 /* ============ INTERACTIONS ============ */
@@ -696,11 +789,73 @@ function aptMode(m){
   document.getElementById('apt-pick').style.display=m==='pick'?'':'none';
   if(m==='pick'&&!$('#chess').innerHTML){renderPickFilters();renderChess();}
 }
+/* --- pick sub-modes: chess / facade / floor --- */
+function pickMode(p){
+  document.querySelectorAll('#pickSub button').forEach(b=>b.classList.toggle('on',b.dataset.p===p));
+  ['chess','facade','floor'].forEach(m=>{const el=document.getElementById('pick-'+m);if(el)el.style.display=m===p?'':'none';});
+  const T={chess:['Шахматка','Все апартаменты по этажам. Нажмите свободную.'],
+    facade:['Фасад','Выберите квартиру прямо на здании.'],
+    floor:['План этажа','Листайте этажи и выбирайте квартиру.']};
+  $('#pickTitle').textContent=T[p][0];$('#pickDesc').textContent=T[p][1];
+  if(p==='facade'&&!$('#facadeWrap').innerHTML)renderFacade();
+  if(p==='floor'&&!$('#floorUnits').innerHTML)renderFloor();
+}
+const FCOL={free:'#F40146',reserved:'#D9A036',sold:'#9aa3b2'};
+function renderFacade(){
+  const cols=UT.length,rows=FLOORS-F0+1,W=300,mX=28,bodyW=W-mX*2,colW=bodyW/cols;
+  const roof=24,fH=25,baseH=44,bodyH=rows*fH,H=roof+bodyH+baseH+8;
+  let s=`<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" style="max-height:62vh">`;
+  s+=`<rect class="fac-body" x="${mX-6}" y="${roof-16}" width="${bodyW+12}" height="${bodyH+baseH+18}" rx="30"/>`;
+  for(let r=0;r<rows;r++){const f=FLOORS-r,y=roof+r*fH;
+    s+=`<text class="fac-flr" x="${mX-10}" y="${y+fH/2+3}" text-anchor="end" font-size="8.5">${f}</text>`;
+    for(let i=0;i<cols;i++){const u=UNITS.find(x=>x.floor===f&&x.pos===i);
+      const x=mX+i*colW+3,wy=y+4,ww=colW-6,wh=fH-8;
+      const op=u.status==='free'?.92:u.status==='reserved'?.85:.4;
+      s+=`<rect class="win ${u.status}" x="${x}" y="${wy}" width="${ww}" height="${wh}" rx="3" fill="${FCOL[u.status]}" opacity="${op}" ${u.status==='free'?`onclick="openUnit('${u.id}')"`:''}></rect>`;}
+  }
+  const by=roof+bodyH;
+  s+=`<rect class="fac-base" x="${mX-6}" y="${by}" width="${bodyW+12}" height="${baseH}" rx="10"/>`;
+  s+=`<text class="fac-lbl" x="${W/2}" y="${by+baseH/2+3.5}" text-anchor="middle" font-size="9.5" font-weight="600">WORLD TRADE CENTER · HYATT CENTRIC</text>`;
+  s+=`</svg>`;
+  $('#facadeWrap').innerHTML=s;
+  $('#facadeLegend').innerHTML=['free','reserved','sold'].map(st=>`<div class="lg"><span class="dot ${st}"></span>${ST[st].ru}</div>`).join('');
+}
+/* --- floor plan --- */
+let flState=Math.round((FLOORS+F0)/2);
+function renderFloor(){
+  const f=flState;
+  $('#floorNav').innerHTML=`<button ${f<=F0?'disabled':''} onclick="floorStep(-1)"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+    <div class="fnum"><b>${f}</b><small>этаж из ${FLOORS}</small></div>
+    <button ${f>=FLOORS?'disabled':''} onclick="floorStep(1)"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>`;
+  const units=UNITS.filter(u=>u.floor===f).sort((a,b)=>a.pos-b.pos);
+  $('#floorUnits').innerHTML=units.map(u=>`<div class="funit ${u.status}" ${u.status==='free'?`onclick="openUnit('${u.id}')"`:''}>
+    ${u.view==='sea'?'<span class="fsea">🌊</span>':''}
+    <div class="fn">${u.num}</div><div class="fr">${u.rooms} · ${u.area} м²</div>
+    <div class="fp">${u.status==='sold'?'Продана':u.status==='reserved'?'Бронь':money(u.price)}</div></div>`).join('');
+}
+function floorStep(d){flState=Math.min(FLOORS,Math.max(F0,flState+d));renderFloor();}
+/* --- construction --- */
+const CSTAGES=[['Подготовка площадки',100,'2024'],['Котлован',100,'2024'],['Фундамент',100,'2024'],
+ ['Монолитный каркас',100,'2025'],['Заполнение стен',75,'III кв. 2026'],['Кровля',60,'III кв. 2026'],
+ ['Фасад и витражи',50,'IV кв. 2026'],['Остекление',42,'IV кв. 2026'],['Инженерные системы',35,'I кв. 2027'],
+ ['Лифты',0,'II кв. 2027'],['Отделка МОП',0,'III кв. 2027'],['Благоустройство',0,'III кв. 2027'],['Ввод в эксплуатацию',0,'IV кв. 2027']];
+const CFEED=[['08.07','Заполнение стен 9 этажа завершено'],['05.07','Электромонтаж вышел на 5 этаж'],
+ ['01.07','Фасад и витражи: смонтирован 6 этаж'],['20.06','Монолитный каркас завершён — коробка готова']];
+let cRendered=false;
+function renderConstruction(){
+  const overall=Math.round(CSTAGES.reduce((a,s)=>a+s[1],0)/CSTAGES.length);
+  $('#cStages').innerHTML=CSTAGES.map(s=>{const st=s[1]>=100?'done':s[1]>0?'active':'pending';
+    return `<div class="cstage ${st}"><span class="cdot"></span><div class="cname"><b>${s[0]}</b><span>${s[2]}</span></div><div class="cp">${s[1]}%</div></div>`;}).join('');
+  $('#cFeed').innerHTML=CFEED.map(f=>`<div class="cfeed-item"><div class="fd">${f[0]}</div><div class="ft">${f[1]}</div></div>`).join('');
+  setTimeout(()=>{$('#cBar').style.width=overall+'%';let n=0;const t=setInterval(()=>{n+=Math.ceil(overall/22);if(n>=overall){n=overall;clearInterval(t);}$('#cPct').textContent=n+'%';},30);},80);
+  cRendered=true;
+}
 
-/* deep-link для превью: ?s=sc-value|sc-app  &tab=apts|infra|invest|contact */
+/* deep-link для превью: ?s=sc-value|sc-app  &tab=apts|invest|construct|contact */
 try{const q=new URLSearchParams(location.search);const s=q.get('s');const tb=q.get('tab');
   if(s==='sc-app'||tb){toApp(tb||'apts');}else if(s){toScreen(s);}
-  if(q.get('m'))aptMode(q.get('m'));}catch(e){}
+  if(q.get('m'))aptMode(q.get('m'));
+  if(q.get('p')){aptMode('pick');pickMode(q.get('p'));}}catch(e){}
 
 /* ===== theme (light default) ===== */
 function applyTheme(t){document.documentElement.setAttribute('data-theme',t);
