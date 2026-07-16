@@ -312,6 +312,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .apt-media{border-bottom:1px solid var(--line)}
 
 /* ===== segmented control ===== */
+.curSw{display:flex;background:var(--bg2);border-radius:100px;padding:3px;gap:2px}
+.curSw button{font-size:11.5px;font-weight:700;color:var(--muted);padding:6px 12px;border-radius:100px;transition:.2s;font-variant-numeric:tabular-nums}
+.curSw button.on{background:var(--panel);color:var(--ink);box-shadow:var(--sh-sm)}
 .seg{display:flex;background:var(--bg2);border-radius:14px;padding:4px;margin-bottom:18px;gap:2px}
 .seg button{flex:1;height:40px;border-radius:10px;font-size:13.5px;font-weight:600;color:var(--muted);transition:.22s var(--ease)}
 .seg button.on{background:var(--panel);color:var(--ink);box-shadow:var(--sh-sm)}
@@ -486,7 +489,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
       <!-- TAB: APARTMENTS -->
       <div class="tabpanel on" id="tab-apts">
-        <div class="app-title"><div class="t-brand"><b>ALLIANCE</b><span>Centropolis</span></div><div class="t-right"><div class="chip">Батуми · у моря</div><button class="themebtn" onclick="toggleTheme()" aria-label="Тема"><svg id="thIcon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"/></svg></button></div></div>
+        <div class="app-title"><div class="t-brand"><b>ALLIANCE</b><span>Centropolis</span></div><div class="t-right"><div class="curSw" id="curSw"><button class="on" data-c="USD" onclick="setCur('USD')">USD</button><button data-c="GEL" onclick="setCur('GEL')">GEL</button></div><button class="themebtn" onclick="toggleTheme()" aria-label="Тема"><svg id="thIcon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"/></svg></button></div></div>
         <div class="wrap">
           <div class="seg" id="aptSeg">
             <button class="on" data-m="types" onclick="aptMode('types')">Типы</button>
@@ -618,11 +621,11 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 <script>
 /* ============ DATA (реальные, Alliance Centropolis) ============ */
 const APTS=[
- {id:'studio',title:'Студия',area:'27 – 35 м²',price:'$135 000',net:'$11 411',payback:'8.5 года',
+ {id:'studio',title:'Студия',area:'27 – 35 м²',priceN:135000,netN:11411,payback:'8.5 года',
   render:'assets/centropolis/studio3d.png',plan:'assets/centropolis/studio2d.png',v360:'https://momento360.com/e/u/6927f188d1dc403b9f534a8869b9ee7b'},
- {id:'onebd',title:'1 спальня',area:'45 – 56 м²',price:'$200 000',net:'$15 111',payback:'9 лет',
+ {id:'onebd',title:'1 спальня',area:'45 – 56 м²',priceN:200000,netN:15111,payback:'9 лет',
   render:'assets/centropolis/onebd3d.png',plan:'assets/centropolis/onebd2d.png',v360:'https://momento360.com/e/u/11405893833347239123a03d38d022f6'},
- {id:'twobd',title:'2 спальни',area:'72 – 74 м²',price:'$300 000',net:'$18 337',payback:'10 лет',
+ {id:'twobd',title:'2 спальни',area:'72 – 74 м²',priceN:300000,netN:18337,payback:'10 лет',
   render:'assets/centropolis/twobd3d.png',plan:'assets/centropolis/twobd2d.png',v360:'https://momento360.com/e/u/4e73da154de04b2aa3262514632fbced'}];
 const GAL=[
  {img:'pool.jpg',t:'Закрытый бассейн и SPA',k:'Wellness'},
@@ -661,8 +664,10 @@ const SOCIALS=[['IG','https://www.instagram.com/alliancegroup_official/'],['f','
 
 /* ============ RENDER ============ */
 const $=s=>document.querySelector(s);
-const money=n=>'$'+n.toLocaleString('ru-RU').replace(/,/g,' ');
-$('#aptList').innerHTML=APTS.map(a=>`
+let CUR='USD';const RATE=2.6057;
+function money(n){ if(CUR==='GEL'){const g=Math.round(n*RATE/100)*100;return g.toLocaleString('ru-RU').replace(/,/g,' ')+' ₾';}
+  return '$'+n.toLocaleString('ru-RU').replace(/,/g,' ');}
+function renderApts(){$('#aptList').innerHTML=APTS.map(a=>`
  <article class="aptcard">
   <div class="apt-media" id="m-${a.id}">
    <div class="apt-toggle"><button class="on" onclick="setMode('${a.id}','3d',this)">3D</button><button onclick="setMode('${a.id}','2d',this)">План</button></div>
@@ -670,11 +675,14 @@ $('#aptList').innerHTML=APTS.map(a=>`
    <img class="render" src="${a.render}" alt="${a.title}"><img class="plan" src="${a.plan}" alt="план">
   </div>
   <div class="apt-info"><div class="top-row"><div><h3>${a.title}</h3><div class="area">${a.area}</div></div>
-   <div class="apt-price"><div class="p">${a.price}</div><div class="from">стоимость от</div></div></div>
-   <div class="apt-econ"><div class="econ"><div class="v">${a.net}</div><div class="k">чистый доход / год</div></div>
+   <div class="apt-price"><div class="p">${money(a.priceN)}</div><div class="from">стоимость от</div></div></div>
+   <div class="apt-econ"><div class="econ"><div class="v">${money(a.netN)}</div><div class="k">чистый доход / год</div></div>
     <div class="econ"><div class="v">${a.payback}</div><div class="k">окупаемость</div></div></div>
    <button class="apt-cta" onclick="openLead('${a.title}')">Забронировать · 0% взнос</button></div>
- </article>`).join('');
+ </article>`).join('');}
+renderApts();
+function setCur(c){CUR=c;document.querySelectorAll('#curSw button').forEach(b=>b.classList.toggle('on',b.dataset.c===c));
+  renderApts();if($('#chess').innerHTML)renderChess();if($('#floorUnits').innerHTML)renderFloor();calc();}
 $('#gal').innerHTML=GAL.map(g=>`<div class="gcard"><img src="assets/centropolis/${g.img}" alt="${g.t}" loading="lazy"><div class="cap"><span>${g.k}</span><b>${g.t}</b></div></div>`).join('');
 $('#svc').innerHTML=SVC.map(([ic,t])=>`<div class="svc-item"><div class="svc-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">${SVG[ic]}</svg></div><span>${t}</span></div>`).join('');
 $('#poi').innerHTML=POI.map(([t,m])=>`<div class="poi-item"><b>${t}</b><span class="t">${m}</span></div>`).join('');
@@ -780,8 +788,19 @@ function openUnit(id){const u=UNITS.find(x=>x.id===id);if(!u)return;
      <div class="u"><div class="v">${u.area} м²</div><div class="k">площадь</div></div>
      <div class="u"><div class="v">${money(Math.round(u.price/60/100)*100)}</div><div class="k">в месяц · 0% · 60 мес</div></div>
    </div>
-   <button class="btn btn-primary" style="width:100%;margin-top:20px" onclick="openLead('Кв. ${u.num}')">Забронировать эту квартиру</button>
+   <div style="display:flex;gap:10px;margin-top:20px">
+     <button class="btn btn-primary" style="flex:1" onclick="openLead('Кв. ${u.num}')">Забронировать</button>
+     <button class="btn btn-ghost" style="flex:0 0 auto;padding:0 18px" onclick="shareUnit('${u.id}')" aria-label="Поделиться">
+       <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5 8.6 10.5"/></svg></button>
+   </div>
    <p style="font-size:11px;color:var(--faint);margin-top:12px;line-height:1.5">Цена рассчитана по этажу и виду. Бронь без первоначального взноса.</p>`);
+}
+function shareUnit(id){const u=UNITS.find(x=>x.id===id);if(!u)return;
+  const txt=`Alliance Centropolis · Квартира № ${u.num}\n${u.rooms}, ${u.area} м², ${u.floor} этаж, ${u.view==='sea'?'вид на море':'вид на город'}\n${money(u.price)} · рассрочка 0%`;
+  const url=location.origin+location.pathname+'?tab=apts&m=pick';
+  if(navigator.share){navigator.share({title:'Alliance Centropolis',text:txt,url}).catch(()=>{});}
+  else{navigator.clipboard&&navigator.clipboard.writeText(txt+'\n'+url);
+    openSheet(`<div style="text-align:center;padding:22px 0"><div style="width:56px;height:56px;margin:0 auto 16px;border-radius:50%;background:var(--red-soft);display:grid;place-items:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></div><h3 style="text-align:center">Скопировано</h3><p style="color:var(--muted);margin-top:8px">Информация о квартире № ${u.num} скопирована — вставьте в чат.</p><button class="btn btn-ghost" style="width:100%;margin-top:20px" onclick="closeSheet()">Готово</button></div>`);}
 }
 function aptMode(m){
   document.querySelectorAll('#aptSeg button').forEach(b=>b.classList.toggle('on',b.dataset.m===m));
@@ -855,7 +874,8 @@ function renderConstruction(){
 try{const q=new URLSearchParams(location.search);const s=q.get('s');const tb=q.get('tab');
   if(s==='sc-app'||tb){toApp(tb||'apts');}else if(s){toScreen(s);}
   if(q.get('m'))aptMode(q.get('m'));
-  if(q.get('p')){aptMode('pick');pickMode(q.get('p'));}}catch(e){}
+  if(q.get('p')){aptMode('pick');pickMode(q.get('p'));}
+  if(q.get('cur'))setCur(q.get('cur'));}catch(e){}
 
 /* ===== theme (light default) ===== */
 function applyTheme(t){document.documentElement.setAttribute('data-theme',t);
