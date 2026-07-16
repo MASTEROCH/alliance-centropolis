@@ -107,7 +107,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .hero-logos .lg b{color:rgba(255,255,255,.92);font-weight:700;display:block;font-size:11px;letter-spacing:.02em;text-transform:none}
 
 /* ===== VALUE screen ===== */
-#sc-value{padding:calc(env(safe-area-inset-top) + 70px) 0 calc(env(safe-area-inset-bottom) + 108px)}
+#sc-value{padding:calc(env(safe-area-inset-top) + 70px) 0 calc(env(safe-area-inset-bottom) + 168px)}
 .val-hero{padding:0 var(--pad)}
 .val-hero h2{font-family:var(--disp);font-weight:800;font-size:clamp(30px,8vw,40px);line-height:1.06;margin-top:14px;letter-spacing:-.03em}
 .val-hero p{color:var(--muted);margin-top:14px;font-size:15px;line-height:1.6}
@@ -217,13 +217,17 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .faq-a p{padding:0 18px 17px;color:var(--muted);font-size:13.5px;line-height:1.62}
 
 /* contact tab */
-.close-cta{position:relative;overflow:hidden;border-radius:24px;padding:34px 24px;margin:0 var(--pad) 22px;
-  background:linear-gradient(150deg,#1a1d27,#0f1116);box-shadow:var(--sh)}
-.close-cta::after{content:'';position:absolute;right:-40px;bottom:-40px;width:200px;height:200px;border-radius:50%;
-  background:radial-gradient(circle,var(--red-glow),transparent 65%)}
-.close-cta h2{font-family:var(--disp);font-weight:800;font-size:28px;line-height:1.08;max-width:12ch;position:relative;z-index:1;color:#fff;letter-spacing:-.03em}
-.close-cta p{color:rgba(255,255,255,.72);margin-top:10px;font-size:14px;position:relative;z-index:1}
-.close-cta .btn{margin-top:22px;width:100%;position:relative;z-index:1}
+.close-cta{position:relative;overflow:hidden;border-radius:24px;margin:0 var(--pad) 22px;min-height:270px;
+  display:flex;flex-direction:column;justify-content:flex-end;background:#0a0d12;box-shadow:var(--sh)}
+.close-cta .cc-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transform:scale(1.04)}
+.close-cta .cc-veil{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(8,10,16,.1) 0%,rgba(8,10,16,.5) 46%,rgba(8,10,16,.92) 100%),
+             radial-gradient(75% 55% at 88% 12%,var(--red-glow),transparent 62%)}
+.close-cta .cc-body{position:relative;z-index:2;padding:28px 24px 24px}
+.close-cta .cc-kick{font-size:10.5px;font-weight:600;letter-spacing:.14em;color:#ffd47a;text-transform:uppercase;margin-bottom:12px}
+.close-cta h2{font-family:var(--disp);font-weight:800;font-size:29px;line-height:1.06;max-width:13ch;color:#fff;letter-spacing:-.03em}
+.close-cta p{color:rgba(255,255,255,.78);margin-top:10px;font-size:14px;line-height:1.5}
+.close-cta .btn{margin-top:22px;width:100%;box-shadow:0 10px 30px -10px rgba(0,0,0,.6)}
 .contacts{padding:0 var(--pad)}
 .ct{display:flex;align-items:center;gap:14px;padding:15px 0;border-bottom:1px solid var(--line)}
 .ct-ic{width:40px;height:40px;flex:none;border-radius:12px;background:var(--red-soft);display:grid;place-items:center}
@@ -278,6 +282,71 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .stagger.in>*:nth-child(4){transition-delay:.18s}.stagger.in>*:nth-child(5){transition-delay:.24s}
 .stagger.in>*:nth-child(6){transition-delay:.3s}.stagger.in>*:nth-child(7){transition-delay:.36s}.stagger.in>*:nth-child(8){transition-delay:.42s}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important}.rv,.stagger>*{opacity:1;transform:none}}
+
+/* ===== PREMIUM POLISH (playbook 10/10) ===== */
+.hook-num,.vic .v,.apt-price .p,.apt-info .area,.econ .v,.pterm .v,.calc-lbl b,.calc-out .o .v,.poi-item .t,.badge{font-variant-numeric:tabular-nums}
+/* tactile micro-interactions */
+.aptcard,.gcard,.pillar,.poi-item,.svc-item,.badge,.navb,.chip,.socials a,.ct,.faq-q,.apt-toggle button,.apt-360{transition:transform .18s var(--ease),box-shadow .26s var(--ease),border-color .2s,background .2s,color .2s}
+.aptcard:active,.gcard:active{transform:scale(.986)}
+.pillar:active,.poi-item:active,.svc-item:active,.badge:active,.socials a:active{transform:scale(.97)}
+.navb:active,.chip:active,.themebtn:active,.backbtn:active,.hero-skip:active{transform:scale(.92)}
+.faq-q:active{opacity:.7}
+/* white-card specular top edge — depth ("дорого") */
+.aptcard::after,.calc::after,.pillar::after,.pterm::after,.val-invest::after,.svc-item::after{content:'';position:absolute;inset:0;
+  border-radius:inherit;pointer-events:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.75);z-index:3}
+:root[data-theme=dark] .aptcard::after,:root[data-theme=dark] .calc::after,:root[data-theme=dark] .pillar::after,
+:root[data-theme=dark] .pterm::after,:root[data-theme=dark] .val-invest::after,:root[data-theme=dark] .svc-item::after{box-shadow:inset 0 1px 0 rgba(255,255,255,.07)}
+.aptcard,.calc,.pillar,.pterm,.val-invest,.svc-item{position:relative}
+/* bottom-nav active pill */
+.navb{z-index:1}
+.navb.on::before{content:'';position:absolute;top:9px;width:38px;height:30px;border-radius:10px;background:var(--red-soft);z-index:-1;
+  animation:navpill .35s var(--ease)}
+@keyframes navpill{from{transform:scale(.6);opacity:0}to{transform:none;opacity:1}}
+/* refined focus ring (a11y) */
+:focus-visible{outline:2px solid var(--red);outline-offset:2px;border-radius:8px}
+/* hero subtle grain for filmic depth */
+.hero-veil{background-image:linear-gradient(180deg,rgba(8,11,17,.34) 0%,rgba(8,11,17,.05) 26%,rgba(8,11,17,.55) 66%,rgba(8,11,17,.93) 94%,#0a0d12 100%),
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E")}
+/* apt card price accent hairline */
+.apt-info{border-top:none}
+.apt-media{border-bottom:1px solid var(--line)}
+
+/* ===== segmented control ===== */
+.seg{display:flex;background:var(--bg2);border-radius:14px;padding:4px;margin-bottom:18px;gap:2px}
+.seg button{flex:1;height:40px;border-radius:10px;font-size:13.5px;font-weight:600;color:var(--muted);transition:.22s var(--ease)}
+.seg button.on{background:var(--panel);color:var(--ink);box-shadow:var(--sh-sm)}
+/* ===== chess / unit picker ===== */
+.pick-filters{display:flex;gap:8px;overflow-x:auto;padding:2px 0 4px;scrollbar-width:none}.pick-filters::-webkit-scrollbar{display:none}
+.fbtn{flex:none;height:38px;padding:0 15px;border-radius:100px;background:var(--panel);border:1px solid var(--line);
+  font-size:13px;font-weight:600;color:var(--ink-soft);transition:.2s var(--ease);box-shadow:var(--sh-sm)}
+.fbtn.on{background:var(--red);border-color:var(--red);color:#fff}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin:14px 0 6px}
+.legend .lg{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--muted);font-weight:500}
+.legend .dot{width:11px;height:11px;border-radius:4px}
+.dot.free{background:var(--red)}.dot.reserved{background:var(--gold-2)}.dot.sold{background:var(--faint)}
+.chess{display:flex;flex-direction:column;gap:7px;margin-top:8px}
+.ch-row{display:flex;align-items:center;gap:8px}
+.ch-fl{flex:none;width:30px;font-size:12px;font-weight:700;color:var(--muted);text-align:center;font-variant-numeric:tabular-nums}
+.ch-cells{flex:1;display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.cell{aspect-ratio:1.15;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;
+  font-size:11px;font-weight:700;transition:.18s var(--ease);border:1px solid transparent;font-variant-numeric:tabular-nums;cursor:pointer}
+.cell .ct{font-size:8px;font-weight:600;opacity:.7;letter-spacing:.02em}
+.cell.free{background:var(--red-soft);color:var(--red);border-color:rgba(244,1,70,.22)}
+.cell.free:active{transform:scale(.9);background:var(--red);color:#fff}
+.cell.reserved{background:color-mix(in srgb,var(--gold-2) 16%,transparent);color:var(--gold-2)}
+.cell.sold{background:var(--bg2);color:var(--faint);cursor:default}
+.cell.hide{visibility:hidden}
+.pick-summary{display:flex;justify-content:space-between;align-items:center;background:var(--panel);border:1px solid var(--line);
+  border-radius:14px;padding:14px 16px;margin-top:16px;box-shadow:var(--sh-sm)}
+.pick-summary b{font-family:var(--disp);font-size:20px;font-weight:800;color:var(--red);font-variant-numeric:tabular-nums}
+.pick-summary span{font-size:12px;color:var(--muted)}
+/* unit sheet specs */
+.uspec{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.uspec .u{background:var(--bg2);border-radius:13px;padding:14px}
+.uspec .u .v{font-family:var(--disp);font-weight:800;font-size:18px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.uspec .u .k{font-size:11px;color:var(--muted);margin-top:4px}
+.uprice{font-family:var(--disp);font-weight:800;font-size:34px;letter-spacing:-.03em;margin-top:14px;font-variant-numeric:tabular-nums}
+.uprice small{font-size:13px;color:var(--muted);font-weight:500;font-family:var(--sans)}
 
 </style>
 </head>
@@ -353,9 +422,28 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
       <!-- TAB: APARTMENTS -->
       <div class="tabpanel on" id="tab-apts">
         <div class="app-title"><div class="t-brand"><b>ALLIANCE</b><span>Centropolis</span></div><div class="t-right"><div class="chip">Батуми · у моря</div><button class="themebtn" onclick="toggleTheme()" aria-label="Тема"><svg id="thIcon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"/></svg></button></div></div>
-        <div class="wrap"><div class="sec-head"><div class="kick">Апартаменты</div><h2>Выберите свой формат</h2>
-          <p>Реальная инвестиционная модель по каждому типу: цена, чистый годовой доход, окупаемость. Осмотрите в 360° или на плане.</p></div></div>
-        <div id="aptList" class="stagger in"></div>
+        <div class="wrap">
+          <div class="seg" id="aptSeg">
+            <button class="on" data-m="types" onclick="aptMode('types')">Типы</button>
+            <button data-m="pick" onclick="aptMode('pick')">Выбрать квартиру</button>
+          </div>
+        </div>
+        <div id="apt-types">
+          <div class="wrap"><div class="sec-head"><div class="kick">Апартаменты</div><h2>Выберите свой формат</h2>
+            <p>Реальная инвестиционная модель по каждому типу: цена, чистый годовой доход, окупаемость. Осмотрите в 360° или на плане.</p></div></div>
+          <div id="aptList" class="stagger in"></div>
+        </div>
+        <div id="apt-pick" style="display:none">
+          <div class="wrap"><div class="sec-head" style="margin-bottom:16px"><div class="kick">Шахматка</div><h2>Выбор квартиры</h2>
+            <p>Все апартаменты по этажам. Цена рассчитана по этажу и виду. Нажмите свободную квартиру.</p></div>
+            <div class="pick-filters" id="pickFilters"></div>
+            <div class="legend" id="pickLegend"></div>
+          </div>
+          <div class="wrap"><div class="chess" id="chess"></div>
+            <div class="pick-summary"><div><b id="pickCount">—</b> <span id="pickCountLbl">свободно</span></div>
+              <div style="text-align:right"><b id="pickMin" style="color:var(--ink)">—</b> <span>цена от</span></div></div>
+          </div>
+        </div>
       </div>
 
       <!-- TAB: INFRA -->
@@ -399,9 +487,14 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
       <div class="tabpanel" id="tab-contact">
         <div class="wrap" style="padding-top:4px"><div class="sec-head"><div class="kick">Контакт</div><h2>Свяжитесь с нами</h2></div></div>
         <div class="close-cta">
-          <h2>Персональное предложение</h2>
-          <p>Менеджер Alliance Group подберёт апартамент под вашу инвестиционную цель.</p>
-          <button class="btn btn-primary" onclick="openLead()">Оставить заявку</button>
+          <img class="cc-bg" src="assets/centropolis/centro3.jpg" alt="Alliance Centropolis">
+          <div class="cc-veil"></div>
+          <div class="cc-body">
+            <div class="cc-kick">Alliance Centropolis · Батуми</div>
+            <h2>Персональное предложение</h2>
+            <p>Менеджер Alliance Group подберёт апартамент под вашу инвестиционную цель и рассчитает доходность.</p>
+            <button class="btn btn-primary" onclick="openLead()">Оставить заявку</button>
+          </div>
         </div>
         <div class="contacts" id="contacts"></div>
         <div class="socials" id="socials"></div>
@@ -542,9 +635,72 @@ const rng=$('#rng');
 function calc(){const p=+rng.value;$('#calcPrice').textContent=money(p);$('#calcMonth').textContent=money(Math.round(p/60/100)*100);$('#calcYield').textContent=money(Math.round(p*0.1/100)*100);}
 rng.addEventListener('input',calc);calc();
 
+/* ============ ВЫБОР КВАРТИРЫ (движок Realty Preset) ============ */
+const UT=[{c:'S',r:'Студия',bd:0,a:31,v:'city'},{c:'A1',r:'1 спальня',bd:1,a:48,v:'city'},
+ {c:'A2',r:'1 спальня',bd:1,a:52,v:'sea'},{c:'B1',r:'2 спальни',bd:2,a:68,v:'city'},
+ {c:'B2',r:'2 спальни',bd:2,a:73,v:'sea'},{c:'C1',r:'2 спальни+',bd:2,a:92,v:'sea'}];
+const FLOORS=12,F0=2,SEA=[2,4,5];
+const ppm=(f,v)=>3950+(f-2)*38+(v==='sea'?420:0);
+const UNITS=(()=>{const u=[];for(let f=F0;f<=FLOORS;f++)for(let i=0;i<UT.length;i++){
+  const num=f*100+i+1,t=UT[(i+f*2)%UT.length],view=SEA.includes(i)?'sea':'city';
+  const h=(f*7+i*13)%20,sb=f<=5?3:f<=9?0:-3;let st='free';if(h+sb>=12)st='sold';else if(h+sb===11)st='reserved';
+  u.push({id:'u'+num,num,floor:f,pos:i,rooms:t.r,bd:t.bd,area:t.a,view,price:Math.round(t.a*ppm(f,view)/100)*100,status:st});}return u;})();
+const ST={free:{ru:'Свободна'},reserved:{ru:'Бронь'},sold:{ru:'Продана'}};
+let pf={rooms:null,sea:false,freeOnly:false};
+function unitVisible(u){ if(pf.rooms&&u.rooms!==pf.rooms)return false; if(pf.sea&&u.view!=='sea')return false;
+  if(pf.freeOnly&&u.status!=='free')return false; return true; }
+function renderPickFilters(){
+  const rooms=[...new Set(UT.map(t=>t.r))];
+  $('#pickFilters').innerHTML=`<button class="fbtn ${!pf.rooms?'on':''}" data-f="all">Все</button>`+
+    rooms.map(r=>`<button class="fbtn ${pf.rooms===r?'on':''}" data-f="r" data-v="${r}">${r}</button>`).join('')+
+    `<button class="fbtn ${pf.sea?'on':''}" data-f="sea">🌊 Вид на море</button>`+
+    `<button class="fbtn ${pf.freeOnly?'on':''}" data-f="free">Только свободные</button>`;
+  $('#pickFilters').querySelectorAll('.fbtn').forEach(b=>b.onclick=()=>{
+    const f=b.dataset.f;
+    if(f==='all')pf.rooms=null; else if(f==='r')pf.rooms=pf.rooms===b.dataset.v?null:b.dataset.v;
+    else if(f==='sea')pf.sea=!pf.sea; else if(f==='free')pf.freeOnly=!pf.freeOnly;
+    renderPickFilters();renderChess();});
+  $('#pickLegend').innerHTML=['free','reserved','sold'].map(s=>`<div class="lg"><span class="dot ${s}"></span>${ST[s].ru}</div>`).join('');
+}
+function renderChess(){
+  let rows='';const per=UT.length;
+  for(let f=FLOORS;f>=F0;f--){
+    let cells='';
+    for(let i=0;i<per;i++){const u=UNITS.find(x=>x.floor===f&&x.pos===i);
+      const vis=unitVisible(u);
+      cells+=`<div class="cell ${u.status} ${vis?'':'hide'}" ${u.status==='free'&&vis?`onclick="openUnit('${u.id}')"`:''}>
+        <span>${u.num}</span><span class="ct">${u.rooms.replace('спальн','сп').replace('Студия','Студ')}</span></div>`;}
+    rows+=`<div class="ch-row"><div class="ch-fl">${f}</div><div class="ch-cells">${cells}</div></div>`;
+  }
+  $('#chess').innerHTML=rows;
+  const vis=UNITS.filter(unitVisible);const free=vis.filter(u=>u.status==='free');
+  $('#pickCount').textContent=free.length;
+  $('#pickMin').textContent=free.length?money(Math.min(...free.map(u=>u.price))):'—';
+}
+function openUnit(id){const u=UNITS.find(x=>x.id===id);if(!u)return;
+  openSheet(`<div style="font-size:11px;font-weight:600;letter-spacing:.1em;color:var(--red);text-transform:uppercase">Квартира № ${u.num}</div>
+   <h3 style="margin-top:6px">${u.rooms} · ${u.area} м²</h3>
+   <div class="uprice">${money(u.price)} <small>${u.status==='free'?'свободна':'бронь'}</small></div>
+   <div class="uspec">
+     <div class="u"><div class="v">${u.floor}</div><div class="k">этаж</div></div>
+     <div class="u"><div class="v">${u.view==='sea'?'🌊 Море':'Город'}</div><div class="k">вид</div></div>
+     <div class="u"><div class="v">${u.area} м²</div><div class="k">площадь</div></div>
+     <div class="u"><div class="v">${money(Math.round(u.price/60/100)*100)}</div><div class="k">в месяц · 0% · 60 мес</div></div>
+   </div>
+   <button class="btn btn-primary" style="width:100%;margin-top:20px" onclick="openLead('Кв. ${u.num}')">Забронировать эту квартиру</button>
+   <p style="font-size:11px;color:var(--faint);margin-top:12px;line-height:1.5">Цена рассчитана по этажу и виду. Бронь без первоначального взноса.</p>`);
+}
+function aptMode(m){
+  document.querySelectorAll('#aptSeg button').forEach(b=>b.classList.toggle('on',b.dataset.m===m));
+  document.getElementById('apt-types').style.display=m==='types'?'':'none';
+  document.getElementById('apt-pick').style.display=m==='pick'?'':'none';
+  if(m==='pick'&&!$('#chess').innerHTML){renderPickFilters();renderChess();}
+}
+
 /* deep-link для превью: ?s=sc-value|sc-app  &tab=apts|infra|invest|contact */
 try{const q=new URLSearchParams(location.search);const s=q.get('s');const tb=q.get('tab');
-  if(s==='sc-app'||tb){toApp(tb||'apts');}else if(s){toScreen(s);}}catch(e){}
+  if(s==='sc-app'||tb){toApp(tb||'apts');}else if(s){toScreen(s);}
+  if(q.get('m'))aptMode(q.get('m'));}catch(e){}
 
 /* ===== theme (light default) ===== */
 function applyTheme(t){document.documentElement.setAttribute('data-theme',t);
