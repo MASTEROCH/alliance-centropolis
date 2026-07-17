@@ -427,29 +427,29 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     <div class="hero-veil"></div>
     <div class="hero-head">
       <div class="brand"><b>ALLIANCE</b><span>Centropolis</span></div>
-      <button class="hero-skip" onclick="toApp('apts')">Пропустить →</button>
+      <button class="hero-skip" data-i18n="skip" onclick="toApp('apts')">Пропустить →</button>
     </div>
     <div class="hero-body">
-      <div class="eyebrow">Батуми · Чёрное море</div>
+      <div class="eyebrow" data-i18n="hero_eye">Батуми · Чёрное море</div>
       <h1>Alliance<br>Centropolis</h1>
       <div class="loc">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.5 7-11a7 7 0 0 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-        50 метров до моря · WTC + Hyatt Centric 5★
+        <span data-i18n="hero_loc">50 метров до моря · WTC + Hyatt Centric 5★</span>
       </div>
       <div class="hero-hook">
         <div class="hook-num">10–12<span style="font-size:.5em">%</span></div>
-        <div class="hook-cap"><b>доходность в год</b><span>рост индекса цен 90–110%</span></div>
+        <div class="hook-cap"><b data-i18n="hero_yield">доходность в год</b><span data-i18n="hero_growth">рост индекса цен 90–110%</span></div>
       </div>
       <div class="hero-cta">
-        <button class="btn btn-primary" onclick="toScreen('sc-value')">Далее</button>
+        <button class="btn btn-primary" onclick="toScreen('sc-value')" data-i18n="next">Далее</button>
         <button class="btn btn-ghost" onclick="open360('studio')" aria-label="360">
           <svg viewBox="0 0 24 24"><path d="M12 4c5.5 0 10 2.7 10 6s-4.5 6-10 6S2 13.3 2 10s4.5-6 10-6Z"/><path d="m9 9 4 2-4 2z" fill="currentColor" stroke="none"/></svg>360°
         </button>
       </div>
       <div class="hero-logos">
-        <div class="lg"><b>Alliance Group</b>девелопер</div>
-        <div class="lg"><b>Hyatt Centric</b>5★ отель</div>
-        <div class="lg"><b>World Trade Center</b>Batumi</div>
+        <div class="lg"><b data-i18n="lg_dev">Alliance Group</b><span data-i18n="lg_dev_s">девелопер</span></div>
+        <div class="lg"><b data-i18n="lg_hotel">Hyatt Centric</b><span data-i18n="lg_hotel_s">5★ отель</span></div>
+        <div class="lg"><b data-i18n="lg_wtc">World Trade Center</b><span data-i18n="lg_wtc_s">Batumi</span></div>
       </div>
     </div>
   </section>
@@ -458,28 +458,28 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   <section class="screen bp" id="sc-value">
     <button class="backbtn" onclick="toScreen('sc-hero')"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
     <div class="val-hero">
-      <div class="eyebrow" style="color:var(--red-2)"><span style="width:20px;height:1px;background:var(--red);display:inline-block"></span>О проекте</div>
-      <h2>Самый многофункциональный проект Кавказии</h2>
-      <p>Всемирный торговый центр, 5★ отель Hyatt Centric Boulevard Batumi и 24 компонента инфраструктуры — в 50 метрах от Чёрного моря. Круглогодичная заполняемость и доходность, каких нет у обычных новостроек.</p>
+      <div class="eyebrow" style="color:var(--red-2)"><span style="width:20px;height:1px;background:var(--red);display:inline-block"></span><span data-i18n="about">О проекте</span></div>
+      <h2 data-i18n="val_title">Самый многофункциональный проект Кавказии</h2>
+      <p data-i18n="val_p">Всемирный торговый центр, 5★ отель Hyatt Centric Boulevard Batumi и 24 компонента инфраструктуры — в 50 метрах от Чёрного моря. Круглогодичная заполняемость и доходность, каких нет у обычных новостроек.</p>
     </div>
     <div class="val-pillars stagger">
       <div class="pillar"><div class="pi"><svg viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-8h6v8"/></svg></div>
-        <div><b>World Trade Center</b><span>Сеть 300+ корпораций в ~100 странах</span></div></div>
+        <div><b data-i18n="pil1_t">World Trade Center</b><span data-i18n="pil1_s">Сеть 300+ корпораций в ~100 странах</span></div></div>
       <div class="pillar"><div class="pi"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 5 5.6.6-4 4 1 5.4L12 19l-5 3 1-5.4-4-4 5.6-.6z"/></svg></div>
-        <div><b>Hyatt Centric 5★</b><span>Международный отель внутри комплекса</span></div></div>
+        <div><b data-i18n="pil2_t">Hyatt Centric 5★</b><span data-i18n="pil2_s">Международный отель внутри комплекса</span></div></div>
       <div class="pillar"><div class="pi"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg></div>
-        <div><b>24 компонента</b><span>Бизнес, отдых и сервис под одной крышей</span></div></div>
+        <div><b data-i18n="pil3_t">24 компонента</b><span data-i18n="pil3_s">Бизнес, отдых и сервис под одной крышей</span></div></div>
     </div>
     <div class="val-invest">
       <div class="vi-top">
-        <div class="vic"><div class="v">0%</div><div class="k">Первоначальный взнос</div></div>
-        <div class="vic"><div class="v">0%</div><div class="k">Внутренняя рассрочка</div></div>
-        <div class="vic"><div class="v">60</div><div class="k">Месяцев</div></div>
+        <div class="vic"><div class="v">0%</div><div class="k" data-i18n="term_down">Первоначальный взнос</div></div>
+        <div class="vic"><div class="v">0%</div><div class="k" data-i18n="term_inst">Внутренняя рассрочка</div></div>
+        <div class="vic"><div class="v">60</div><div class="k" data-i18n="term_mon">Месяцев</div></div>
       </div>
-      <div class="vi-note">Старт от <b style="color:var(--gold-2)">$2 800/м²</b> · оплата BTC / USDT · покупка удалённо</div>
+      <div class="vi-note" data-i18n="val_note">Старт от $2 800/м² · оплата BTC / USDT · покупка удалённо</div>
     </div>
     <div class="ob-cta">
-      <button class="btn btn-primary" onclick="toApp('apts')">Смотреть апартаменты</button>
+      <button class="btn btn-primary" data-i18n="see_apts" onclick="toApp('apts')">Смотреть апартаменты</button>
     </div>
   </section>
 
@@ -489,33 +489,33 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
       <!-- TAB: APARTMENTS -->
       <div class="tabpanel on" id="tab-apts">
-        <div class="app-title"><div class="t-brand"><b>ALLIANCE</b><span>Centropolis</span></div><div class="t-right"><div class="curSw" id="curSw"><button class="on" data-c="USD" onclick="setCur('USD')">USD</button><button data-c="GEL" onclick="setCur('GEL')">GEL</button></div><button class="themebtn" onclick="toggleTheme()" aria-label="Тема"><svg id="thIcon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"/></svg></button></div></div>
+        <div class="app-title"><div class="t-brand"><b>ALLIANCE</b><span>Centropolis</span></div><div class="t-right"><div class="curSw" id="langSw"><button class="on" data-l="ru" onclick="setLang('ru')">RU</button><button data-l="en" onclick="setLang('en')">EN</button><button data-l="ge" onclick="setLang('ge')">GE</button></div><div class="curSw" id="curSw"><button class="on" data-c="USD" onclick="setCur('USD')">USD</button><button data-c="GEL" onclick="setCur('GEL')">GEL</button></div><button class="themebtn" onclick="toggleTheme()" aria-label="Тема"><svg id="thIcon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"/></svg></button></div></div>
         <div class="wrap">
           <div class="seg" id="aptSeg">
-            <button class="on" data-m="types" onclick="aptMode('types')">Типы</button>
-            <button data-m="pick" onclick="aptMode('pick')">Выбрать квартиру</button>
+            <button class="on" data-m="types" data-i18n="seg_types" onclick="aptMode('types')">Типы</button>
+            <button data-m="pick" data-i18n="seg_pick" onclick="aptMode('pick')">Выбрать квартиру</button>
           </div>
         </div>
         <div id="apt-types">
-          <div class="wrap"><div class="sec-head"><div class="kick">Апартаменты</div><h2>Выберите свой формат</h2>
-            <p>Реальная инвестиционная модель по каждому типу: цена, чистый годовой доход, окупаемость. Осмотрите в 360° или на плане.</p></div></div>
+          <div class="wrap"><div class="sec-head"><div class="kick" data-i18n="apts_kick">Апартаменты</div><h2 data-i18n="apts_title">Выберите свой формат</h2>
+            <p data-i18n="apts_p">Реальная инвестиционная модель по каждому типу: цена, чистый годовой доход, окупаемость. Осмотрите в 360° или на плане.</p></div></div>
           <div id="aptList" class="stagger in"></div>
         </div>
         <div id="apt-pick" style="display:none">
           <div class="wrap">
-            <div class="sec-head" style="margin-bottom:14px"><div class="kick">Выбор квартиры</div><h2 id="pickTitle">Шахматка</h2>
+            <div class="sec-head" style="margin-bottom:14px"><div class="kick" data-i18n="pick_kick">Выбор квартиры</div><h2 id="pickTitle">Шахматка</h2>
               <p id="pickDesc">Все апартаменты по этажам. Цена рассчитана по этажу и виду. Нажмите свободную.</p></div>
             <div class="subseg" id="pickSub">
-              <button class="on" data-p="chess" onclick="pickMode('chess')">Шахматка</button>
-              <button data-p="facade" onclick="pickMode('facade')">Фасад</button>
-              <button data-p="floor" onclick="pickMode('floor')">Этаж</button>
+              <button class="on" data-p="chess" data-i18n="sub_chess" onclick="pickMode('chess')">Шахматка</button>
+              <button data-p="facade" data-i18n="sub_facade" onclick="pickMode('facade')">Фасад</button>
+              <button data-p="floor" data-i18n="sub_floor" onclick="pickMode('floor')">Этаж</button>
             </div>
           </div>
           <div id="pick-chess">
             <div class="wrap"><div class="pick-filters" id="pickFilters"></div><div class="legend" id="pickLegend"></div></div>
             <div class="wrap"><div class="chess" id="chess"></div>
               <div class="pick-summary"><div><b id="pickCount">—</b> <span id="pickCountLbl">свободно</span></div>
-                <div style="text-align:right"><b id="pickMin" style="color:var(--ink)">—</b> <span>цена от</span></div></div>
+                <div style="text-align:right"><b id="pickMin" style="color:var(--ink)">—</b> <span data-i18n="price_from">цена от</span></div></div>
             </div>
           </div>
           <div id="pick-facade" style="display:none">
@@ -530,52 +530,52 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
       <!-- TAB: INFRA -->
       <div class="tabpanel" id="tab-infra">
-        <div class="wrap" style="padding-top:4px"><div class="sec-head"><div class="kick">Инфраструктура</div><h2>24 компонента для жизни и дохода</h2>
-          <p>Именно инфраструктура даёт несезонную заполняемость и доходность.</p></div></div>
+        <div class="wrap" style="padding-top:4px"><div class="sec-head"><div class="kick" data-i18n="infra_kick">Инфраструктура</div><h2 data-i18n="infra_title">24 компонента для жизни и дохода</h2>
+          <p data-i18n="infra_p">Именно инфраструктура даёт несезонную заполняемость и доходность.</p></div></div>
         <div id="gal"></div>
-        <div class="wrap"><div class="sec-head" style="margin:10px 0 18px"><div class="kick">Сервис</div><h2 style="font-size:30px">Управление уровня Hyatt</h2></div></div>
+        <div class="wrap"><div class="sec-head" style="margin:10px 0 18px"><div class="kick" data-i18n="svc_kick">Сервис</div><h2 style="font-size:30px" data-i18n="svc_title">Управление уровня Hyatt</h2></div></div>
         <div class="svc" id="svc"></div>
       </div>
 
       <!-- TAB: INVEST -->
       <div class="tabpanel" id="tab-invest">
-        <div class="wrap" style="padding-top:4px"><div class="sec-head"><div class="kick">Инвестиции</div><h2>Лимитированная возможность</h2>
-          <p>0% взнос, 0% внутренняя рассрочка до 60 месяцев. Рассчитайте платёж и доход.</p></div></div>
+        <div class="wrap" style="padding-top:4px"><div class="sec-head"><div class="kick" data-i18n="inv_kick">Инвестиции</div><h2 data-i18n="inv_title">Лимитированная возможность</h2>
+          <p data-i18n="inv_p">0% взнос, 0% внутренняя рассрочка до 60 месяцев. Рассчитайте платёж и доход.</p></div></div>
         <div class="pterm-row">
-          <div class="pterm"><div class="v">0%</div><div class="k">Взнос</div></div>
-          <div class="pterm"><div class="v">0%</div><div class="k">Рассрочка</div></div>
-          <div class="pterm"><div class="v">60</div><div class="k">Месяцев</div></div>
+          <div class="pterm"><div class="v">0%</div><div class="k" data-i18n="pt_down">Взнос</div></div>
+          <div class="pterm"><div class="v">0%</div><div class="k" data-i18n="pt_inst">Рассрочка</div></div>
+          <div class="pterm"><div class="v">60</div><div class="k" data-i18n="term_mon">Месяцев</div></div>
         </div>
         <div class="calc">
-          <div class="calc-lbl"><span>Стоимость апартамента</span><b id="calcPrice">$200 000</b></div>
+          <div class="calc-lbl"><span data-i18n="calc_price">Стоимость апартамента</span><b id="calcPrice">$200 000</b></div>
           <input type="range" class="rng" id="rng" min="135000" max="300000" step="5000" value="200000">
           <div class="calc-out">
-            <div class="o"><div class="v big" id="calcMonth">$3 333</div><div class="k">платёж / месяц · 60 мес</div></div>
-            <div class="o"><div class="v" id="calcYield">$20 000</div><div class="k">доход / год · ~10%</div></div>
+            <div class="o"><div class="v big" id="calcMonth">$3 333</div><div class="k" data-i18n="calc_month">платёж / месяц · 60 мес</div></div>
+            <div class="o"><div class="v" id="calcYield">$20 000</div><div class="k" data-i18n="calc_year">доход / год · ~10%</div></div>
           </div>
         </div>
         <div class="badges">
-          <div class="badge"><svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/></svg>BTC / USDT</div>
-          <div class="badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></svg>Удалённо</div>
-          <div class="badge"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Программа лояльности</div>
+          <div class="badge"><svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/></svg><span data-i18n="badge_crypto">BTC / USDT</span></div>
+          <div class="badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></svg><span data-i18n="badge_remote">Удалённо</span></div>
+          <div class="badge"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-i18n="badge_loyalty">Программа лояльности</span></div>
         </div>
-        <div class="wrap"><div class="sec-head" style="margin:32px 0 18px"><div class="kick">Локация</div><h2 style="font-size:30px">В сердце Батуми</h2></div></div>
+        <div class="wrap"><div class="sec-head" style="margin:32px 0 18px"><div class="kick" data-i18n="loc_kick">Локация</div><h2 style="font-size:30px" data-i18n="loc_title">В сердце Батуми</h2></div></div>
         <div class="poi" id="poi"></div>
-        <div class="wrap"><div class="sec-head" style="margin:32px 0 16px"><div class="kick">Вопросы</div><h2 style="font-size:30px">Инвесторам</h2></div></div>
+        <div class="wrap"><div class="sec-head" style="margin:32px 0 16px"><div class="kick" data-i18n="faq_kick">Вопросы</div><h2 style="font-size:30px" data-i18n="faq_title">Инвесторам</h2></div></div>
         <div class="faq-wrap" id="faq"></div>
       </div>
 
       <!-- TAB: CONTACT -->
       <div class="tabpanel" id="tab-contact">
-        <div class="wrap" style="padding-top:4px"><div class="sec-head"><div class="kick">Контакт</div><h2>Свяжитесь с нами</h2></div></div>
+        <div class="wrap" style="padding-top:4px"><div class="sec-head"><div class="kick" data-i18n="ct_kick">Контакт</div><h2 data-i18n="ct_title">Свяжитесь с нами</h2></div></div>
         <div class="close-cta">
           <img class="cc-bg" src="assets/centropolis/centro3.jpg" alt="Alliance Centropolis">
           <div class="cc-veil"></div>
           <div class="cc-body">
-            <div class="cc-kick">Alliance Centropolis · Батуми</div>
-            <h2>Персональное предложение</h2>
-            <p>Менеджер Alliance Group подберёт апартамент под вашу инвестиционную цель и рассчитает доходность.</p>
-            <button class="btn btn-primary" onclick="openLead()">Оставить заявку</button>
+            <div class="cc-kick" data-i18n="cc_kick">Alliance Centropolis · Батуми</div>
+            <h2 data-i18n="cc_title">Персональное предложение</h2>
+            <p data-i18n="cc_p">Менеджер Alliance Group подберёт апартамент под вашу инвестиционную цель и рассчитает доходность.</p>
+            <button class="btn btn-primary" data-i18n="lead_cta" onclick="openLead()">Оставить заявку</button>
           </div>
         </div>
         <div class="contacts" id="contacts"></div>
@@ -586,12 +586,12 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
       <!-- TAB: CONSTRUCTION -->
       <div class="tabpanel" id="tab-construct">
-        <div class="wrap" style="padding-top:4px"><div class="sec-head"><div class="kick">Ход стройки</div><h2>Строится сейчас</h2>
-          <p>Готовность по этапам. На объекте — веб-камеры 24/7.</p></div></div>
-        <div class="cprog"><div class="cprog-top"><div class="pct" id="cPct">—</div><div class="pl">общая готовность комплекса</div></div>
+        <div class="wrap" style="padding-top:4px"><div class="sec-head"><div class="kick" data-i18n="c_kick">Ход стройки</div><h2 data-i18n="c_title">Строится сейчас</h2>
+          <p data-i18n="c_p">Готовность по этапам. На объекте — веб-камеры 24/7.</p></div></div>
+        <div class="cprog"><div class="cprog-top"><div class="pct" id="cPct">—</div><div class="pl" data-i18n="c_overall">общая готовность комплекса</div></div>
           <div class="cbar"><i id="cBar" style="width:0"></i></div></div>
         <div class="cstages" id="cStages"></div>
-        <div class="wrap"><div class="sec-head" style="margin:28px 0 6px"><div class="kick">Хроника</div><h2 style="font-size:28px">Последние работы</h2></div></div>
+        <div class="wrap"><div class="sec-head" style="margin:28px 0 6px"><div class="kick" data-i18n="c_chr_kick">Хроника</div><h2 style="font-size:28px" data-i18n="c_chr_title">Последние работы</h2></div></div>
         <div class="cfeed" id="cFeed"></div>
       </div>
 
@@ -600,15 +600,15 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     <!-- BOTTOM NAV -->
     <nav class="botnav">
       <button class="navb on" data-tab="apts" onclick="goTab('apts')">
-        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-7h6v7"/></svg>Квартиры</button>
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-7h6v7"/></svg><span data-i18n="nav_apts">Квартиры</span></button>
       <button class="navb" data-tab="infra" onclick="goTab('infra')">
-        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Инфра</button>
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span data-i18n="nav_infra">Инфра</span></button>
       <button class="navb" data-tab="construct" onclick="goTab('construct')">
-        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V3l11 3.4"/><path d="M16 6.4 20 7.6"/><path d="M16 6.4v3.2l-4 1.2"/><path d="M4 21h16"/></svg>Стройка</button>
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V3l11 3.4"/><path d="M16 6.4 20 7.6"/><path d="M16 6.4v3.2l-4 1.2"/><path d="M4 21h16"/></svg><span data-i18n="nav_construct">Стройка</span></button>
       <button class="navb" data-tab="invest" onclick="goTab('invest')">
-        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M7 15l4-5 3 3 5-7"/></svg>Инвест</button>
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M7 15l4-5 3 3 5-7"/></svg><span data-i18n="nav_invest">Инвест</span></button>
       <button class="navb" data-tab="contact" onclick="goTab('contact')">
-        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z"/></svg>Контакт</button>
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z"/></svg><span data-i18n="nav_contact">Контакт</span></button>
     </nav>
   </section>
 
@@ -619,25 +619,212 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 </div>
 
 <script>
-/* ============ DATA (реальные, Alliance Centropolis) ============ */
+/* ============ i18n dictionary RU / EN / GE ============ */
+const L={
+ ru:{
+  nav_apts:'Квартиры',nav_infra:'Инфра',nav_construct:'Стройка',nav_invest:'Инвест',nav_contact:'Контакт',
+  skip:'Пропустить →',next:'Далее',see_apts:'Смотреть апартаменты',
+  hero_eye:'Батуми · Чёрное море',hero_loc:'50 метров до моря · WTC + Hyatt Centric 5★',
+  hero_yield:'доходность в год',hero_growth:'рост индекса цен 90–110%',
+  lg_dev:'Alliance Group',lg_dev_s:'девелопер',lg_hotel:'Hyatt Centric',lg_hotel_s:'5★ отель',lg_wtc:'World Trade Center',lg_wtc_s:'Batumi',
+  about:'О проекте',val_title:'Самый многофункциональный проект Кавказии',
+  val_p:'Всемирный торговый центр, 5★ отель Hyatt Centric Boulevard Batumi и 24 компонента инфраструктуры — в 50 метрах от Чёрного моря. Круглогодичная заполняемость и доходность, каких нет у обычных новостроек.',
+  pil1_t:'World Trade Center',pil1_s:'Сеть 300+ корпораций в ~100 странах',
+  pil2_t:'Hyatt Centric 5★',pil2_s:'Международный отель внутри комплекса',
+  pil3_t:'24 компонента',pil3_s:'Бизнес, отдых и сервис под одной крышей',
+  term_down:'Первоначальный взнос',term_inst:'Внутренняя рассрочка',term_mon:'Месяцев',
+  val_note:'Старт от $2 800/м² · оплата BTC / USDT · покупка удалённо',
+  seg_types:'Типы',seg_pick:'Выбрать квартиру',
+  apts_kick:'Апартаменты',apts_title:'Выберите свой формат',
+  apts_p:'Реальная инвестиционная модель по каждому типу: цена, чистый годовой доход, окупаемость. Осмотрите в 360° или на плане.',
+  pick_kick:'Выбор квартиры',sub_chess:'Шахматка',sub_facade:'Фасад',sub_floor:'Этаж',
+  pk_chess_t:'Шахматка',pk_chess_d:'Все апартаменты по этажам. Нажмите свободную.',
+  pk_facade_t:'Фасад',pk_facade_d:'Выберите квартиру прямо на здании.',
+  pk_floor_t:'План этажа',pk_floor_d:'Листайте этажи и выбирайте квартиру.',
+  free_lbl:'свободно',price_from:'цена от',
+  f_all:'Все',f_sea:'🌊 Вид на море',f_free:'Только свободные',
+  st_free:'Свободна',st_reserved:'Бронь',st_sold:'Продана',
+  floor_of:'этаж из',
+  infra_kick:'Инфраструктура',infra_title:'24 компонента для жизни и дохода',
+  infra_p:'Именно инфраструктура даёт несезонную заполняемость и доходность.',
+  svc_kick:'Сервис',svc_title:'Управление уровня Hyatt',
+  c_kick:'Ход стройки',c_title:'Строится сейчас',c_p:'Готовность по этапам. На объекте — веб-камеры 24/7.',
+  c_overall:'общая готовность комплекса',c_chr_kick:'Хроника',c_chr_title:'Последние работы',
+  inv_kick:'Инвестиции',inv_title:'Лимитированная возможность',inv_p:'0% взнос, 0% внутренняя рассрочка до 60 месяцев. Рассчитайте платёж и доход.',
+  pt_down:'Взнос',pt_inst:'Рассрочка',pt_mon:'Месяцев',
+  calc_price:'Стоимость апартамента',calc_month:'платёж / месяц · 60 мес',calc_year:'доход / год · ~10%',
+  badge_crypto:'BTC / USDT',badge_remote:'Удалённо',badge_loyalty:'Программа лояльности',
+  loc_kick:'Локация',loc_title:'В сердце Батуми',faq_kick:'Вопросы',faq_title:'Инвесторам',
+  ct_kick:'Контакт',ct_title:'Свяжитесь с нами',cc_kick:'Alliance Centropolis · Батуми',
+  cc_title:'Персональное предложение',cc_p:'Менеджер Alliance Group подберёт апартамент под вашу инвестиционную цель и рассчитает доходность.',
+  lead_cta:'Оставить заявку',foot:'Alliance Centropolis · Alliance Group — Батуми, ул. К. Марджанишвили N6. Демо на движке Realty Preset · данные и рендеры — centropolis.ge / alliance.ge · AppHub.',
+  ap_from:'стоимость от',ap_net:'чистый доход / год',ap_pay:'окупаемость',ap_book:'Забронировать · 0% взнос',
+  t_studio:'Студия',t_1bd:'1 спальня',t_2bd:'2 спальни',t_2bdp:'2 спальни+',
+  pb_studio:'8.5 года',pb_1:'9 лет',pb_2:'10 лет',
+  min:'мин',by_car:'авто',view_sea:'🌊 Море',view_city:'Город',
+  u_apt:'Квартира №',u_floor:'этаж',u_view:'вид',u_area:'площадь',u_month:'в месяц · 0% · 60 мес',
+  u_free:'свободна',u_res:'бронь',u_book:'Забронировать',u_note:'Цена рассчитана по этажу и виду. Бронь без первоначального взноса.',
+  lead_title:'Заявка на апартамент',lead_name:'Имя',lead_phone:'Телефон',lead_send:'Отправить заявку',
+  lead_note:'Менеджер Alliance Group свяжется с вами. Демо-форма.',lead_ok_t:'Заявка отправлена',lead_ok_p:'Спасибо! Менеджер свяжется с вами в ближайшее время.',close:'Закрыть',
+  v360_sub:'виртуальный тур',share_ok_t:'Скопировано',share_ok_p:'Информация о квартире скопирована — вставьте в чат.',done:'Готово',
+  g_pool:'Закрытый бассейн и SPA',g_pool_k:'Wellness',g_cowork:'Co-working пространство',g_cowork_k:'MICE · Бизнес',
+  g_cinema:'Кинотеатр',g_ent_k:'Развлечения',g_bowl:'Боулинг',g_food:'Гастрономическое пространство',g_food_k:'Рестораны',
+  g_conf:'Конференц-зал',g_conf_k:'WTC · События',g_ball:'Зал для мероприятий',g_ball_k:'Банкеты',g_ent:'Развлекательный центр',g_leis_k:'Досуг',
+  sv_reception:'Ресепшн 24/7',sv_concierge:'Консьерж',sv_parking:'Паркинг',sv_security:'Охрана',sv_cctv:'Видеонаблюдение',sv_room:'Обслуживание квартир',sv_tech:'Техобслуживание',sv_car:'Сервис авто',
+  poi_beach:'Пляж и Бульвар',poi_piazza:'Пьяцца Батуми',poi_wheel:'Колесо обозрения',poi_alpha:'Башня алфавита',poi_port:'Батумский порт',poi_air:'Аэропорт',
+  cs_1:'Подготовка площадки',cs_2:'Котлован',cs_3:'Фундамент',cs_4:'Монолитный каркас',cs_5:'Заполнение стен',cs_6:'Кровля',cs_7:'Фасад и витражи',cs_8:'Остекление',cs_9:'Инженерные системы',cs_10:'Лифты',cs_11:'Отделка МОП',cs_12:'Благоустройство',cs_13:'Ввод в эксплуатацию',
+  cf_1:'Заполнение стен 9 этажа завершено',cf_2:'Электромонтаж вышел на 5 этаж',cf_3:'Фасад и витражи: смонтирован 6 этаж',cf_4:'Монолитный каркас завершён — коробка готова',
+  q1:'Что определяет инвестиционную привлекательность Центрополиса?',a1:'Проект объединяет первое в регионе выставочное пространство World Trade Center и 5★ отель Hyatt Centric. Расположение в 50 м от моря, масштабная инфраструктура и глобальные партнёрства обеспечивают круглогодичную заполняемость.',
+  q2:'В чём значимость Всемирного торгового центра (WTC)?',a2:'Сеть WTCA — 300+ корпораций почти в 100 странах. WTC ежегодно принимает 6000+ конференций и выставок, что повышает престиж и круглогодичную заполняемость комплекса.',
+  q3:'Какие преимущества даёт покупка апартамента?',a3:'Управление международной менеджмент-компанией, аренда по международным стандартам и эксклюзивная программа лояльности для инвесторов.',
+  q4:'Можно ли купить удалённо и за криптовалюту?',a4:'Да. Покупка полностью удалённо из любой точки мира, оплата в том числе Bitcoin и USDT. Недвижимость в Грузии может приобрести гражданин любой страны.'
+ },
+ en:{
+  nav_apts:'Homes',nav_infra:'Amenities',nav_construct:'Progress',nav_invest:'Invest',nav_contact:'Contact',
+  skip:'Skip →',next:'Continue',see_apts:'View apartments',
+  hero_eye:'Batumi · Black Sea',hero_loc:'50 metres to the sea · WTC + Hyatt Centric 5★',
+  hero_yield:'annual yield',hero_growth:'price index growth 90–110%',
+  lg_dev:'Alliance Group',lg_dev_s:'developer',lg_hotel:'Hyatt Centric',lg_hotel_s:'5★ hotel',lg_wtc:'World Trade Center',lg_wtc_s:'Batumi',
+  about:'About',val_title:'The most multifunctional project in the Caucasus',
+  val_p:'A World Trade Center, a 5★ Hyatt Centric Boulevard Batumi hotel and 24 infrastructure components — 50 metres from the Black Sea. Year-round occupancy and returns ordinary developments can\'t match.',
+  pil1_t:'World Trade Center',pil1_s:'A network of 300+ corporations in ~100 countries',
+  pil2_t:'Hyatt Centric 5★',pil2_s:'An international hotel inside the complex',
+  pil3_t:'24 components',pil3_s:'Business, leisure and service under one roof',
+  term_down:'Down payment',term_inst:'In-house instalment',term_mon:'Months',
+  val_note:'From $2,800/m² · pay with BTC / USDT · buy remotely',
+  seg_types:'Types',seg_pick:'Pick a unit',
+  apts_kick:'Apartments',apts_title:'Choose your format',
+  apts_p:'A real investment model for each type: price, net annual income, payback. Explore in 360° or on the plan.',
+  pick_kick:'Unit selection',sub_chess:'Grid',sub_facade:'Facade',sub_floor:'Floor',
+  pk_chess_t:'Availability grid',pk_chess_d:'All apartments by floor. Tap an available one.',
+  pk_facade_t:'Facade',pk_facade_d:'Pick a unit right on the building.',
+  pk_floor_t:'Floor plan',pk_floor_d:'Browse floors and choose a unit.',
+  free_lbl:'available',price_from:'from',
+  f_all:'All',f_sea:'🌊 Sea view',f_free:'Available only',
+  st_free:'Available',st_reserved:'Reserved',st_sold:'Sold',
+  floor_of:'floor of',
+  infra_kick:'Amenities',infra_title:'24 components for living and income',
+  infra_p:'It is the infrastructure that drives off-season occupancy and returns.',
+  svc_kick:'Service',svc_title:'Hyatt-level management',
+  c_kick:'Construction',c_title:'Building now',c_p:'Readiness by stage. Live webcams on site, 24/7.',
+  c_overall:'overall complex readiness',c_chr_kick:'Timeline',c_chr_title:'Latest works',
+  inv_kick:'Investment',inv_title:'A limited opportunity',inv_p:'0% down, 0% in-house instalment up to 60 months. Calculate your payment and income.',
+  pt_down:'Down',pt_inst:'Instalment',pt_mon:'Months',
+  calc_price:'Apartment price',calc_month:'payment / month · 60 mo',calc_year:'income / year · ~10%',
+  badge_crypto:'BTC / USDT',badge_remote:'Remote',badge_loyalty:'Loyalty program',
+  loc_kick:'Location',loc_title:'In the heart of Batumi',faq_kick:'FAQ',faq_title:'For investors',
+  ct_kick:'Contact',ct_title:'Get in touch',cc_kick:'Alliance Centropolis · Batumi',
+  cc_title:'A personal offer',cc_p:'An Alliance Group manager will match an apartment to your investment goal and calculate the returns.',
+  lead_cta:'Request a call',foot:'Alliance Centropolis · Alliance Group — Batumi, K. Marjanishvili St. N6. Demo on the Realty Preset engine · data and renders from centropolis.ge / alliance.ge · AppHub.',
+  ap_from:'price from',ap_net:'net income / year',ap_pay:'payback',ap_book:'Book · 0% down',
+  t_studio:'Studio',t_1bd:'1 bedroom',t_2bd:'2 bedrooms',t_2bdp:'2 bedrooms+',
+  pb_studio:'8.5 years',pb_1:'9 years',pb_2:'10 years',
+  min:'min',by_car:'car',view_sea:'🌊 Sea',view_city:'City',
+  u_apt:'Apartment №',u_floor:'floor',u_view:'view',u_area:'area',u_month:'per month · 0% · 60 mo',
+  u_free:'available',u_res:'reserved',u_book:'Book this unit',u_note:'Price is calculated by floor and view. Booking with no down payment.',
+  lead_title:'Apartment request',lead_name:'Name',lead_phone:'Phone',lead_send:'Send request',
+  lead_note:'An Alliance Group manager will contact you. Demo form.',lead_ok_t:'Request sent',lead_ok_p:'Thank you! A manager will reach out shortly.',close:'Close',
+  v360_sub:'virtual tour',share_ok_t:'Copied',share_ok_p:'Apartment details copied — paste into a chat.',done:'Done',
+  g_pool:'Indoor pool & SPA',g_pool_k:'Wellness',g_cowork:'Co-working space',g_cowork_k:'MICE · Business',
+  g_cinema:'Cinema',g_ent_k:'Entertainment',g_bowl:'Bowling',g_food:'Food mall',g_food_k:'Dining',
+  g_conf:'Conference hall',g_conf_k:'WTC · Events',g_ball:'Event hall',g_ball_k:'Banquets',g_ent:'Entertainment centre',g_leis_k:'Leisure',
+  sv_reception:'Reception 24/7',sv_concierge:'Concierge',sv_parking:'Parking',sv_security:'Security',sv_cctv:'CCTV',sv_room:'Apartment service',sv_tech:'Maintenance',sv_car:'Car service',
+  poi_beach:'Beach & Boulevard',poi_piazza:'Piazza Batumi',poi_wheel:'Ferris Wheel',poi_alpha:'Alphabet Tower',poi_port:'Batumi Port',poi_air:'Airport',
+  cs_1:'Site preparation',cs_2:'Excavation',cs_3:'Foundation',cs_4:'Concrete frame',cs_5:'Wall infill',cs_6:'Roofing',cs_7:'Facade & curtain wall',cs_8:'Glazing',cs_9:'Engineering systems',cs_10:'Elevators',cs_11:'Common areas finish',cs_12:'Landscaping',cs_13:'Occupancy permit',
+  cf_1:'9th floor wall infill completed',cf_2:'Electrical works reached the 5th floor',cf_3:'Facade & curtain wall: 6th floor installed',cf_4:'Concrete frame topped out — shell complete',
+  q1:'What drives Centropolis\'s investment appeal?',a1:'The project combines the region\'s first World Trade Center exhibition space and a 5★ Hyatt Centric hotel. Its location 50 m from the sea, large-scale infrastructure and global partnerships ensure year-round occupancy.',
+  q2:'Why does the World Trade Center (WTC) matter?',a2:'The WTCA network spans 300+ corporations in nearly 100 countries. The WTC hosts 6,000+ conferences and expos a year, boosting prestige and year-round occupancy.',
+  q3:'What benefits come with buying an apartment?',a3:'Management by an international company, rental to international standards and an exclusive loyalty program for investors.',
+  q4:'Can I buy remotely and with crypto?',a4:'Yes. Fully remote purchase from anywhere in the world, payment including Bitcoin and USDT. A citizen of any country can buy property in Georgia.'
+ },
+ ge:{
+  nav_apts:'ბინები',nav_infra:'ინფრა',nav_construct:'მშენებლობა',nav_invest:'ინვესტ',nav_contact:'კონტაქტი',
+  skip:'გამოტოვება →',next:'შემდეგ',see_apts:'ბინების ნახვა',
+  hero_eye:'ბათუმი · შავი ზღვა',hero_loc:'50 მეტრი ზღვამდე · WTC + Hyatt Centric 5★',
+  hero_yield:'წლიური სარგებელი',hero_growth:'ფასის ინდექსის ზრდა 90–110%',
+  lg_dev:'Alliance Group',lg_dev_s:'დეველოპერი',lg_hotel:'Hyatt Centric',lg_hotel_s:'5★ სასტუმრო',lg_wtc:'World Trade Center',lg_wtc_s:'ბათუმი',
+  about:'პროექტის შესახებ',val_title:'კავკასიის ყველაზე მრავალფუნქციური პროექტი',
+  val_p:'მსოფლიო სავაჭრო ცენტრი, 5★ სასტუმრო Hyatt Centric Boulevard Batumi და ინფრასტრუქტურის 24 კომპონენტი — შავ ზღვამდე 50 მეტრში. მთელი წლის დატვირთვა და სარგებელი, რაც ჩვეულებრივ ახალ კორპუსებს არ აქვთ.',
+  pil1_t:'World Trade Center',pil1_s:'300+ კორპორაციის ქსელი ~100 ქვეყანაში',
+  pil2_t:'Hyatt Centric 5★',pil2_s:'საერთაშორისო სასტუმრო კომპლექსში',
+  pil3_t:'24 კომპონენტი',pil3_s:'ბიზნესი, დასვენება და სერვისი ერთ ჭერქვეშ',
+  term_down:'პირველადი შენატანი',term_inst:'შიდა განვადება',term_mon:'თვე',
+  val_note:'დან $2 800/მ² · გადახდა BTC / USDT · შესყიდვა დისტანციურად',
+  seg_types:'ტიპები',seg_pick:'აირჩიე ბინა',
+  apts_kick:'აპარტამენტები',apts_title:'აირჩიე შენი ფორმატი',
+  apts_p:'რეალური საინვესტიციო მოდელი თითო ტიპზე: ფასი, წლიური სუფთა შემოსავალი, უკუგება. დაათვალიერე 360°-ში ან გეგმაზე.',
+  pick_kick:'ბინის არჩევა',sub_chess:'ცხრილი',sub_facade:'ფასადი',sub_floor:'სართული',
+  pk_chess_t:'ხელმისაწვდომობის ცხრილი',pk_chess_d:'ყველა ბინა სართულების მიხედვით. დააჭირე თავისუფალს.',
+  pk_facade_t:'ფასადი',pk_facade_d:'აირჩიე ბინა პირდაპირ შენობაზე.',
+  pk_floor_t:'სართულის გეგმა',pk_floor_d:'გადაფურცლე სართულები და აირჩიე ბინა.',
+  free_lbl:'თავისუფალი',price_from:'ფასი დან',
+  f_all:'ყველა',f_sea:'🌊 ზღვის ხედი',f_free:'მხოლოდ თავისუფალი',
+  st_free:'თავისუფალი',st_reserved:'დაჯავშნილი',st_sold:'გაყიდული',
+  floor_of:'სართული,',
+  infra_kick:'ინფრასტრუქტურა',infra_title:'24 კომპონენტი ცხოვრებისა და შემოსავლისთვის',
+  infra_p:'სწორედ ინფრასტრუქტურა უზრუნველყოფს არასეზონურ დატვირთვასა და სარგებელს.',
+  svc_kick:'სერვისი',svc_title:'Hyatt-ის დონის მართვა',
+  c_kick:'მშენებლობის მიმდინარეობა',c_title:'შენდება ახლა',c_p:'მზადყოფნა ეტაპების მიხედვით. ობიექტზე — ვებკამერები 24/7.',
+  c_overall:'კომპლექსის საერთო მზადყოფნა',c_chr_kick:'ქრონიკა',c_chr_title:'ბოლო სამუშაოები',
+  inv_kick:'ინვესტიცია',inv_title:'ლიმიტირებული შესაძლებლობა',inv_p:'0% შენატანი, 0% შიდა განვადება 60 თვემდე. გამოთვალე გადასახადი და შემოსავალი.',
+  pt_down:'შენატანი',pt_inst:'განვადება',pt_mon:'თვე',
+  calc_price:'ბინის ღირებულება',calc_month:'გადასახადი / თვე · 60 თვე',calc_year:'შემოსავალი / წელი · ~10%',
+  badge_crypto:'BTC / USDT',badge_remote:'დისტანციურად',badge_loyalty:'ლოიალობის პროგრამა',
+  loc_kick:'მდებარეობა',loc_title:'ბათუმის გულში',faq_kick:'კითხვები',faq_title:'ინვესტორებს',
+  ct_kick:'კონტაქტი',ct_title:'დაგვიკავშირდი',cc_kick:'Alliance Centropolis · ბათუმი',
+  cc_title:'პერსონალური შეთავაზება',cc_p:'Alliance Group-ის მენეჯერი შეარჩევს ბინას შენი საინვესტიციო მიზნისთვის და გამოთვლის სარგებელს.',
+  lead_cta:'დატოვე განაცხადი',foot:'Alliance Centropolis · Alliance Group — ბათუმი, კ. მარჯანიშვილის ქ. N6. დემო Realty Preset-ზე · მონაცემები და რენდერები — centropolis.ge / alliance.ge · AppHub.',
+  ap_from:'ღირებულება დან',ap_net:'სუფთა შემოსავალი / წელი',ap_pay:'უკუგება',ap_book:'დაჯავშნა · 0% შენატანი',
+  t_studio:'სტუდიო',t_1bd:'1 საძინებელი',t_2bd:'2 საძინებელი',t_2bdp:'2 საძინებელი+',
+  pb_studio:'8.5 წელი',pb_1:'9 წელი',pb_2:'10 წელი',
+  min:'წთ',by_car:'მანქ.',view_sea:'🌊 ზღვა',view_city:'ქალაქი',
+  u_apt:'ბინა №',u_floor:'სართული',u_view:'ხედი',u_area:'ფართობი',u_month:'თვეში · 0% · 60 თვე',
+  u_free:'თავისუფალი',u_res:'ჯავშანი',u_book:'ამ ბინის დაჯავშნა',u_note:'ფასი გამოთვლილია სართულისა და ხედის მიხედვით. ჯავშანი პირველადი შენატანის გარეშე.',
+  lead_title:'განაცხადი ბინაზე',lead_name:'სახელი',lead_phone:'ტელეფონი',lead_send:'განაცხადის გაგზავნა',
+  lead_note:'Alliance Group-ის მენეჯერი დაგიკავშირდებათ. დემო ფორმა.',lead_ok_t:'განაცხადი გაიგზავნა',lead_ok_p:'გმადლობთ! მენეჯერი მალე დაგიკავშირდებათ.',close:'დახურვა',
+  v360_sub:'ვირტუალური ტური',share_ok_t:'დაკოპირდა',share_ok_p:'ბინის ინფორმაცია დაკოპირდა — ჩასვი ჩატში.',done:'მზადაა',
+  g_pool:'დახურული აუზი და SPA',g_pool_k:'Wellness',g_cowork:'Co-working სივრცე',g_cowork_k:'MICE · ბიზნესი',
+  g_cinema:'კინოთეატრი',g_ent_k:'გართობა',g_bowl:'ბოულინგი',g_food:'გასტრონომიული სივრცე',g_food_k:'რესტორნები',
+  g_conf:'საკონფერენციო დარბაზი',g_conf_k:'WTC · ღონისძიებები',g_ball:'ღონისძიებების დარბაზი',g_ball_k:'ბანკეტები',g_ent:'გასართობი ცენტრი',g_leis_k:'დასვენება',
+  sv_reception:'რესეფშენი 24/7',sv_concierge:'კონსიერჟი',sv_parking:'პარკინგი',sv_security:'დაცვა',sv_cctv:'ვიდეომეთვალყურეობა',sv_room:'ბინების მომსახურება',sv_tech:'ტექმომსახურება',sv_car:'ავტოსერვისი',
+  poi_beach:'პლაჟი და ბულვარი',poi_piazza:'პიაცა ბათუმი',poi_wheel:'მიმოხილვის ბორბალი',poi_alpha:'ანბანის კოშკი',poi_port:'ბათუმის პორტი',poi_air:'აეროპორტი',
+  cs_1:'მოედნის მომზადება',cs_2:'ქვაბული',cs_3:'საძირკველი',cs_4:'მონოლითური კარკასი',cs_5:'კედლების შევსება',cs_6:'სახურავი',cs_7:'ფასადი და ვიტრაჟები',cs_8:'შემინვა',cs_9:'საინჟინრო სისტემები',cs_10:'ლიფტები',cs_11:'საერთო სივრცეების მოპირკეთება',cs_12:'კეთილმოწყობა',cs_13:'ექსპლუატაციაში მიღება',
+  cf_1:'მე-9 სართულის კედლების შევსება დასრულდა',cf_2:'ელექტროსამუშაოები მე-5 სართულზე ავიდა',cf_3:'ფასადი და ვიტრაჟები: მე-6 სართული დამონტაჟდა',cf_4:'მონოლითური კარკასი დასრულდა — კარკასი მზადაა',
+  q1:'რა განსაზღვრავს ცენტროპოლისის საინვესტიციო მიმზიდველობას?',a1:'პროექტი აერთიანებს რეგიონში პირველ World Trade Center-ის საგამოფენო სივრცესა და 5★ Hyatt Centric-ს. ზღვიდან 50 მ მდებარეობა, მასშტაბური ინფრასტრუქტურა და გლობალური პარტნიორობა უზრუნველყოფს მთელი წლის დატვირთვას.',
+  q2:'რა მნიშვნელობა აქვს მსოფლიო სავაჭრო ცენტრს (WTC)?',a2:'WTCA-ს ქსელი მოიცავს 300+ კორპორაციას თითქმის 100 ქვეყანაში. WTC წელიწადში 6000+ კონფერენციასა და გამოფენას მასპინძლობს, რაც ზრდის პრესტიჟსა და დატვირთვას.',
+  q3:'რას იძლევა ბინის შეძენა?',a3:'მართვა საერთაშორისო კომპანიის მიერ, გაქირავება საერთაშორისო სტანდარტებით და ინვესტორთა ექსკლუზიური ლოიალობის პროგრამა.',
+  q4:'შესაძლებელია დისტანციურად და კრიპტოთი შეძენა?',a4:'დიახ. სრულად დისტანციური შესყიდვა მსოფლიოს ნებისმიერი წერტილიდან, გადახდა მათ შორის Bitcoin-ითა და USDT-ით. საქართველოში უძრავ ქონებას ნებისმიერი ქვეყნის მოქალაქე შეიძენს.'
+ }
+};
+let LANG='ru';
+const t=k=>((L[LANG]&&L[LANG][k])!=null?L[LANG][k]:(L.ru[k]!=null?L.ru[k]:k));
+function applyI18n(){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{el.textContent=t(el.getAttribute('data-i18n'));});
+  document.documentElement.lang=LANG;
+}
+function setLang(l){LANG=l;try{localStorage.setItem('ac-lang',l)}catch(e){}
+  document.querySelectorAll('#langSw button').forEach(b=>b.classList.toggle('on',b.dataset.l===l));
+  applyI18n();renderApts();renderGal();renderSvc();renderPoi();renderFaq();renderContacts();
+  if($('#chess').innerHTML){renderPickFilters();renderChess();}
+  if($('#facadeWrap').innerHTML)renderFacade();
+  if($('#floorUnits').innerHTML)renderFloor();
+  if(cRendered)renderConstruction();
+  syncPickTexts();calc();
+}
+
+/* ============ DATA ============ */
+const $=s=>document.querySelector(s);
+let CUR='USD';const RATE=2.6057;
+function money(n){ if(CUR==='GEL'){const g=Math.round(n*RATE/100)*100;return g.toLocaleString('ru-RU').replace(/,/g,' ')+' ₾';}
+  return '$'+n.toLocaleString('ru-RU').replace(/,/g,' ');}
 const APTS=[
- {id:'studio',title:'Студия',area:'27 – 35 м²',priceN:135000,netN:11411,payback:'8.5 года',
-  render:'assets/centropolis/studio3d.png',plan:'assets/centropolis/studio2d.png',v360:'https://momento360.com/e/u/6927f188d1dc403b9f534a8869b9ee7b'},
- {id:'onebd',title:'1 спальня',area:'45 – 56 м²',priceN:200000,netN:15111,payback:'9 лет',
-  render:'assets/centropolis/onebd3d.png',plan:'assets/centropolis/onebd2d.png',v360:'https://momento360.com/e/u/11405893833347239123a03d38d022f6'},
- {id:'twobd',title:'2 спальни',area:'72 – 74 м²',priceN:300000,netN:18337,payback:'10 лет',
-  render:'assets/centropolis/twobd3d.png',plan:'assets/centropolis/twobd2d.png',v360:'https://momento360.com/e/u/4e73da154de04b2aa3262514632fbced'}];
-const GAL=[
- {img:'pool.jpg',t:'Закрытый бассейн и SPA',k:'Wellness'},
- {img:'coworking.jpg',t:'Co-working пространство',k:'MICE · Бизнес'},
- {img:'cinema.jpg',t:'Кинотеатр',k:'Развлечения'},
- {img:'bawling.jpg',t:'Боулинг',k:'Развлечения'},
- {img:'foodmall.jpg',t:'Гастрономическое пространство',k:'Рестораны'},
- {img:'conference.jpg',t:'Конференц-зал',k:'WTC · События'},
- {img:'balroom.jpg',t:'Зал для мероприятий',k:'Банкеты'},
- {img:'entertainment.jpg',t:'Развлекательный центр',k:'Досуг'}];
-const SVC=[['reception','Ресепшн 24/7'],['concierge','Консьерж'],['parking','Паркинг'],['security','Охрана'],
- ['cctv','Видеонаблюдение'],['room','Обслуживание квартир'],['technical','Техобслуживание'],['car','Сервис авто']];
+ {id:'studio',tk:'t_studio',area:'27 – 35',pk:'pb_studio',priceN:135000,netN:11411,render:'assets/centropolis/studio3d.png',plan:'assets/centropolis/studio2d.png',v360:'https://momento360.com/e/u/6927f188d1dc403b9f534a8869b9ee7b'},
+ {id:'onebd',tk:'t_1bd',area:'45 – 56',pk:'pb_1',priceN:200000,netN:15111,render:'assets/centropolis/onebd3d.png',plan:'assets/centropolis/onebd2d.png',v360:'https://momento360.com/e/u/11405893833347239123a03d38d022f6'},
+ {id:'twobd',tk:'t_2bd',area:'72 – 74',pk:'pb_2',priceN:300000,netN:18337,render:'assets/centropolis/twobd3d.png',plan:'assets/centropolis/twobd2d.png',v360:'https://momento360.com/e/u/4e73da154de04b2aa3262514632fbced'}];
+const GAL=[['pool','g_pool','g_pool_k'],['coworking','g_cowork','g_cowork_k'],['cinema','g_cinema','g_ent_k'],['bawling','g_bowl','g_ent_k'],
+ ['foodmall','g_food','g_food_k'],['conference','g_conf','g_conf_k'],['balroom','g_ball','g_ball_k'],['entertainment','g_ent','g_leis_k']];
+const SVC=[['reception','sv_reception'],['concierge','sv_concierge'],['parking','sv_parking'],['security','sv_security'],
+ ['cctv','sv_cctv'],['room','sv_room'],['technical','sv_tech'],['car','sv_car']];
 const SVG={reception:'<path d="M4 21v-4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v4"/><circle cx="12" cy="7" r="3.5"/>',
  concierge:'<path d="M4 20h16"/><path d="M6 20v-6a6 6 0 0 1 12 0v6"/><path d="M12 4v4"/>',
  parking:'<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/>',
@@ -646,15 +833,11 @@ const SVG={reception:'<path d="M4 21v-4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v4"/><circl
  room:'<path d="M3 21V9l9-6 9 6v12"/><rect x="9" y="13" width="6" height="8"/>',
  technical:'<path d="M14 7a4 4 0 0 0-5.5 5.5L3 18l3 3 5.5-5.5A4 4 0 0 0 17 10l-2 2-3-3z"/>',
  car:'<path d="M5 13l1.5-5h11L19 13"/><path d="M4 13h16v5H4z"/><circle cx="7.5" cy="18" r="1.5"/><circle cx="16.5" cy="18" r="1.5"/>'};
-const POI=[['Пляж и Бульвар','1 мин'],['Пьяцца Батуми','5 мин'],['Колесо обозрения','6 мин'],
- ['Башня алфавита','8 мин'],['Батумский порт','10 мин'],['Аэропорт','15 мин · авто']];
-const FAQ=[
- ['Что определяет инвестиционную привлекательность Центрополиса?','Проект объединяет первое в регионе выставочное пространство World Trade Center и 5★ отель Hyatt Centric. Расположение в 50 м от моря, масштабная инфраструктура и глобальные партнёрства обеспечивают круглогодичную заполняемость.'],
- ['В чём значимость Всемирного торгового центра (WTC)?','Сеть WTCA — 300+ корпораций почти в 100 странах. WTC ежегодно принимает 6000+ конференций и выставок, что повышает престиж и круглогодичную заполняемость комплекса.'],
- ['Какие преимущества даёт покупка апартамента?','Управление международной менеджмент-компанией, аренда по международным стандартам и эксклюзивная программа лояльности для инвесторов.'],
- ['Можно ли купить удалённо и за криптовалюту?','Да. Покупка полностью удалённо из любой точки мира, оплата в том числе Bitcoin и USDT. Недвижимость в Грузии может приобрести гражданин любой страны.']];
-const CONTACTS=[['phone','Телефон','+995 322 50 00 00','tel:+99532250000000'],['wa','WhatsApp','+995 557 44 00 00','https://wa.me/995557440000'],
- ['mail','Почта','sales@alliance.ge','mailto:sales@alliance.ge'],['web','Сайт','alliance.ge','https://www.alliance.ge']];
+const POI=[['poi_beach',1,0],['poi_piazza',5,0],['poi_wheel',6,0],['poi_alpha',8,0],['poi_port',10,0],['poi_air',15,1]];
+const FAQK=[['q1','a1'],['q2','a2'],['q3','a3'],['q4','a4']];
+const CONTACTS=[['phone','+995 322 50 00 00','tel:+99532250000000'],['wa','+995 557 44 00 00','https://wa.me/995557440000'],
+ ['mail','sales@alliance.ge','mailto:sales@alliance.ge'],['web','alliance.ge','https://www.alliance.ge']];
+const CT_LBL={phone:{ru:'Телефон',en:'Phone',ge:'ტელეფონი'},wa:{ru:'WhatsApp',en:'WhatsApp',ge:'WhatsApp'},mail:{ru:'Почта',en:'Email',ge:'ელფოსტა'},web:{ru:'Сайт',en:'Website',ge:'ვებგვერდი'}};
 const CT_SVG={phone:'<path d="M6 3h3l1.5 5-2 1.5a12 12 0 0 0 6 6l1.5-2 5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4 5a2 2 0 0 1 2-2Z"/>',
  wa:'<path d="M4 20l1.4-4A8 8 0 1 1 9 18.6z"/><path d="M9 9.5c.3 2 3 4.5 5 4.7"/>',
  mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
@@ -663,52 +846,48 @@ const SOCIALS=[['IG','https://www.instagram.com/alliancegroup_official/'],['f','
  ['YT','https://www.youtube.com/channel/UCkGxHjMsGWVL31g_ZSzmzvQ'],['in','https://www.linkedin.com/company/alliance-group-georgia/']];
 
 /* ============ RENDER ============ */
-const $=s=>document.querySelector(s);
-let CUR='USD';const RATE=2.6057;
-function money(n){ if(CUR==='GEL'){const g=Math.round(n*RATE/100)*100;return g.toLocaleString('ru-RU').replace(/,/g,' ')+' ₾';}
-  return '$'+n.toLocaleString('ru-RU').replace(/,/g,' ');}
 function renderApts(){$('#aptList').innerHTML=APTS.map(a=>`
  <article class="aptcard">
   <div class="apt-media" id="m-${a.id}">
-   <div class="apt-toggle"><button class="on" onclick="setMode('${a.id}','3d',this)">3D</button><button onclick="setMode('${a.id}','2d',this)">План</button></div>
+   <div class="apt-toggle"><button class="on" onclick="setMode('${a.id}','3d',this)">3D</button><button onclick="setMode('${a.id}','2d',this)">${t('sub_floor')}</button></div>
    <button class="apt-360" onclick="open360('${a.id}')"><svg viewBox="0 0 24 24"><path d="M12 4c5.5 0 10 2.7 10 6s-4.5 6-10 6S2 13.3 2 10s4.5-6 10-6Z"/><path d="m9 9 4 2-4 2z" fill="currentColor" stroke="none"/></svg>360°</button>
-   <img class="render" src="${a.render}" alt="${a.title}"><img class="plan" src="${a.plan}" alt="план">
+   <img class="render" src="${a.render}" alt=""><img class="plan" src="${a.plan}" alt="">
   </div>
-  <div class="apt-info"><div class="top-row"><div><h3>${a.title}</h3><div class="area">${a.area}</div></div>
-   <div class="apt-price"><div class="p">${money(a.priceN)}</div><div class="from">стоимость от</div></div></div>
-   <div class="apt-econ"><div class="econ"><div class="v">${money(a.netN)}</div><div class="k">чистый доход / год</div></div>
-    <div class="econ"><div class="v">${a.payback}</div><div class="k">окупаемость</div></div></div>
-   <button class="apt-cta" onclick="openLead('${a.title}')">Забронировать · 0% взнос</button></div>
+  <div class="apt-info"><div class="top-row"><div><h3>${t(a.tk)}</h3><div class="area">${a.area} м²</div></div>
+   <div class="apt-price"><div class="p">${money(a.priceN)}</div><div class="from">${t('ap_from')}</div></div></div>
+   <div class="apt-econ"><div class="econ"><div class="v">${money(a.netN)}</div><div class="k">${t('ap_net')}</div></div>
+    <div class="econ"><div class="v">${t(a.pk)}</div><div class="k">${t('ap_pay')}</div></div></div>
+   <button class="apt-cta" onclick="openLead('${t(a.tk)}')">${t('ap_book')}</button></div>
  </article>`).join('');}
-renderApts();
+function renderGal(){$('#gal').innerHTML=GAL.map(g=>`<div class="gcard"><img src="assets/centropolis/${g[0]}.jpg" alt="" loading="lazy"><div class="cap"><span>${t(g[2])}</span><b>${t(g[1])}</b></div></div>`).join('');}
+function renderSvc(){$('#svc').innerHTML=SVC.map(s=>`<div class="svc-item"><div class="svc-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">${SVG[s[0]]}</svg></div><span>${t(s[1])}</span></div>`).join('');}
+function renderPoi(){$('#poi').innerHTML=POI.map(p=>`<div class="poi-item"><b>${t(p[0])}</b><span class="t">${p[1]} ${t('min')}${p[2]?' · '+t('by_car'):''}</span></div>`).join('');}
+function renderFaq(){$('#faq').innerHTML=FAQK.map((f,i)=>`<div class="faq-item" id="faq-${i}"><div class="faq-q" onclick="toggleFaq(${i})">${t(f[0])}<span class="ic">＋</span></div><div class="faq-a"><p>${t(f[1])}</p></div></div>`).join('');}
+function renderContacts(){$('#contacts').innerHTML=CONTACTS.map(c=>`<a class="ct" href="${c[2]}" target="_blank" rel="noopener"><div class="ct-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">${CT_SVG[c[0]]}</svg></div><div><div class="k">${CT_LBL[c[0]][LANG]||CT_LBL[c[0]].ru}</div><div class="v">${c[1]}</div></div></a>`).join('');
+  $('#socials').innerHTML=SOCIALS.map(s=>`<a href="${s[1]}" target="_blank" rel="noopener">${s[0]}</a>`).join('');}
+function syncPickTexts(){const b=document.querySelector('#pickSub button.on');const p=b?b.dataset.p:'chess';
+  const T={chess:['pk_chess_t','pk_chess_d'],facade:['pk_facade_t','pk_facade_d'],floor:['pk_floor_t','pk_floor_d']};
+  if($('#pickTitle')){$('#pickTitle').textContent=t(T[p][0]);$('#pickDesc').textContent=t(T[p][1]);}
+  if($('#pickCountLbl'))$('#pickCountLbl').textContent=t('free_lbl');}
+
 function setCur(c){CUR=c;document.querySelectorAll('#curSw button').forEach(b=>b.classList.toggle('on',b.dataset.c===c));
   renderApts();if($('#chess').innerHTML)renderChess();if($('#floorUnits').innerHTML)renderFloor();calc();}
-$('#gal').innerHTML=GAL.map(g=>`<div class="gcard"><img src="assets/centropolis/${g.img}" alt="${g.t}" loading="lazy"><div class="cap"><span>${g.k}</span><b>${g.t}</b></div></div>`).join('');
-$('#svc').innerHTML=SVC.map(([ic,t])=>`<div class="svc-item"><div class="svc-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">${SVG[ic]}</svg></div><span>${t}</span></div>`).join('');
-$('#poi').innerHTML=POI.map(([t,m])=>`<div class="poi-item"><b>${t}</b><span class="t">${m}</span></div>`).join('');
-$('#faq').innerHTML=FAQ.map((f,i)=>`<div class="faq-item" id="faq-${i}"><div class="faq-q" onclick="toggleFaq(${i})">${f[0]}<span class="ic">＋</span></div><div class="faq-a"><p>${f[1]}</p></div></div>`).join('');
-$('#contacts').innerHTML=CONTACTS.map(([ic,k,v,h])=>`<a class="ct" href="${h}" target="_blank" rel="noopener"><div class="ct-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">${CT_SVG[ic]}</svg></div><div><div class="k">${k}</div><div class="v">${v}</div></div></a>`).join('');
-$('#socials').innerHTML=SOCIALS.map(([l,u])=>`<a href="${u}" target="_blank" rel="noopener">${l}</a>`).join('');
 
 /* ============ SCREEN ROUTER ============ */
 let cur='sc-hero';
 function revealIn(el){ if(!el)return; requestAnimationFrame(()=>el.querySelectorAll('.rv,.stagger').forEach(e=>e.classList.add('in'))); }
 function toScreen(id){
-  if(id===cur)return;
-  const els=document.querySelectorAll('.screen');
-  const order=['sc-hero','sc-value','sc-app'];
-  const goingFwd=order.indexOf(id)>order.indexOf(cur);
-  els.forEach(s=>{
+  if(id===cur)return;const order=['sc-hero','sc-value','sc-app'];const fwd=order.indexOf(id)>order.indexOf(cur);
+  document.querySelectorAll('.screen').forEach(s=>{
     if(s.id===id){s.classList.add('active');s.classList.remove('past');s.scrollTop=0;revealIn(s);}
-    else if(s.id===cur){s.classList.remove('active');s.classList.toggle('past',goingFwd);}
-  });
+    else if(s.id===cur){s.classList.remove('active');s.classList.toggle('past',fwd);}});
   cur=id;
 }
-function toApp(tab){ toScreen('sc-app'); if(tab) goTab(tab); }
+function toApp(tab){toScreen('sc-app');if(tab)goTab(tab);}
 function goTab(name){
   document.querySelectorAll('.tabpanel').forEach(p=>p.classList.toggle('on',p.id==='tab-'+name));
   document.querySelectorAll('.navb').forEach(b=>b.classList.toggle('on',b.dataset.tab===name));
-  const p=document.getElementById('tab-'+name); if(p){ p.scrollTop=0; revealIn(p); }
+  const p=document.getElementById('tab-'+name);if(p){p.scrollTop=0;revealIn(p);}
   if(name==='construct'&&!cRendered)renderConstruction();
 }
 
@@ -721,171 +900,138 @@ const sheetBody=$('#sheetBody');
 function openSheet(html){sheetBody.innerHTML=html;$('#sheet').classList.add('show');$('#sheetBack').classList.add('show');}
 function closeSheet(){$('#sheet').classList.remove('show');$('#sheetBack').classList.remove('show');setTimeout(()=>sheetBody.innerHTML='',400);}
 function open360(id){const a=APTS.find(x=>x.id===id)||APTS[0];
-  openSheet(`<h3>${a.title} · 360°</h3><div style="font-family:var(--mono);font-size:11px;color:var(--muted)">${a.area} · виртуальный тур</div><iframe src="${a.v360}" allowfullscreen loading="lazy"></iframe>`);}
-function openLead(type){openSheet(`<h3>Заявка на апартамент</h3>
-  <div style="font-family:var(--mono);font-size:11px;color:var(--gold-2);letter-spacing:.05em">${type?type.toUpperCase()+' · ':''}ALLIANCE CENTROPOLIS</div>
-  <div class="field"><label>Имя</label><input id="ldName" placeholder="Ваше имя"></div>
-  <div class="field"><label>Телефон</label><input id="ldPhone" placeholder="+995 ..." inputmode="tel"></div>
-  <button class="btn btn-primary" style="width:100%;margin-top:18px" onclick="sendLead()">Отправить заявку</button>
-  <p style="font-size:11px;color:var(--faint);margin-top:12px;line-height:1.5">Менеджер Alliance Group свяжется с вами. Демо-форма.</p>`);}
+  openSheet(`<h3>${t(a.tk)} · 360°</h3><div style="font-family:var(--mono);font-size:11px;color:var(--muted)">${a.area} м² · ${t('v360_sub')}</div><iframe src="${a.v360}" allowfullscreen loading="lazy"></iframe>`);}
+function openLead(type){openSheet(`<h3>${t('lead_title')}</h3>
+  <div style="font-family:var(--mono);font-size:11px;color:var(--gold-2);letter-spacing:.05em">${type?type+' · ':''}ALLIANCE CENTROPOLIS</div>
+  <div class="field"><label>${t('lead_name')}</label><input id="ldName" placeholder="${t('lead_name')}"></div>
+  <div class="field"><label>${t('lead_phone')}</label><input id="ldPhone" placeholder="+995 ..." inputmode="tel"></div>
+  <button class="btn btn-primary" style="width:100%;margin-top:18px" onclick="sendLead()">${t('lead_send')}</button>
+  <p style="font-size:11px;color:var(--faint);margin-top:12px;line-height:1.5">${t('lead_note')}</p>`);}
 function sendLead(){openSheet(`<div style="text-align:center;padding:26px 0">
-  <div style="width:64px;height:64px;margin:0 auto 18px;border-radius:50%;background:rgba(244,1,70,.12);border:1px solid var(--red);display:grid;place-items:center"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--red-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></div>
-  <h3 style="text-align:center">Заявка отправлена</h3><p style="color:var(--muted);margin-top:8px">Спасибо! Менеджер свяжется с вами в ближайшее время.</p>
-  <button class="btn btn-ghost" style="width:100%;margin-top:22px" onclick="closeSheet()">Закрыть</button></div>`);}
+  <div style="width:64px;height:64px;margin:0 auto 18px;border-radius:50%;background:var(--red-soft);border:1px solid var(--red);display:grid;place-items:center"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></div>
+  <h3 style="text-align:center">${t('lead_ok_t')}</h3><p style="color:var(--muted);margin-top:8px">${t('lead_ok_p')}</p>
+  <button class="btn btn-ghost" style="width:100%;margin-top:22px" onclick="closeSheet()">${t('close')}</button></div>`);}
 const rng=$('#rng');
 function calc(){const p=+rng.value;$('#calcPrice').textContent=money(p);$('#calcMonth').textContent=money(Math.round(p/60/100)*100);$('#calcYield').textContent=money(Math.round(p*0.1/100)*100);}
-rng.addEventListener('input',calc);calc();
+rng.addEventListener('input',calc);
 
-/* ============ ВЫБОР КВАРТИРЫ (движок Realty Preset) ============ */
-const UT=[{c:'S',r:'Студия',bd:0,a:31,v:'city'},{c:'A1',r:'1 спальня',bd:1,a:48,v:'city'},
- {c:'A2',r:'1 спальня',bd:1,a:52,v:'sea'},{c:'B1',r:'2 спальни',bd:2,a:68,v:'city'},
- {c:'B2',r:'2 спальни',bd:2,a:73,v:'sea'},{c:'C1',r:'2 спальни+',bd:2,a:92,v:'sea'}];
+/* ============ ВЫБОР КВАРТИРЫ ============ */
+const UT=[{c:'S',rk:'t_studio',bd:0,a:31,v:'city'},{c:'A1',rk:'t_1bd',bd:1,a:48,v:'city'},
+ {c:'A2',rk:'t_1bd',bd:1,a:52,v:'sea'},{c:'B1',rk:'t_2bd',bd:2,a:68,v:'city'},
+ {c:'B2',rk:'t_2bd',bd:2,a:73,v:'sea'},{c:'C1',rk:'t_2bdp',bd:2,a:92,v:'sea'}];
 const FLOORS=12,F0=2,SEA=[2,4,5];
 const ppm=(f,v)=>3950+(f-2)*38+(v==='sea'?420:0);
 const UNITS=(()=>{const u=[];for(let f=F0;f<=FLOORS;f++)for(let i=0;i<UT.length;i++){
-  const num=f*100+i+1,t=UT[(i+f*2)%UT.length],view=SEA.includes(i)?'sea':'city';
+  const num=f*100+i+1,ty=UT[(i+f*2)%UT.length],view=SEA.includes(i)?'sea':'city';
   const h=(f*7+i*13)%20,sb=f<=5?3:f<=9?0:-3;let st='free';if(h+sb>=12)st='sold';else if(h+sb===11)st='reserved';
-  u.push({id:'u'+num,num,floor:f,pos:i,rooms:t.r,bd:t.bd,area:t.a,view,price:Math.round(t.a*ppm(f,view)/100)*100,status:st});}return u;})();
-const ST={free:{ru:'Свободна'},reserved:{ru:'Бронь'},sold:{ru:'Продана'}};
+  u.push({id:'u'+num,num,floor:f,pos:i,rk:ty.rk,bd:ty.bd,area:ty.a,view,price:Math.round(ty.a*ppm(f,view)/100)*100,status:st});}return u;})();
 let pf={rooms:null,sea:false,freeOnly:false};
-function unitVisible(u){ if(pf.rooms&&u.rooms!==pf.rooms)return false; if(pf.sea&&u.view!=='sea')return false;
-  if(pf.freeOnly&&u.status!=='free')return false; return true; }
+function unitVisible(u){if(pf.rooms&&u.rk!==pf.rooms)return false;if(pf.sea&&u.view!=='sea')return false;if(pf.freeOnly&&u.status!=='free')return false;return true;}
 function renderPickFilters(){
-  const rooms=[...new Set(UT.map(t=>t.r))];
-  $('#pickFilters').innerHTML=`<button class="fbtn ${!pf.rooms?'on':''}" data-f="all">Все</button>`+
-    rooms.map(r=>`<button class="fbtn ${pf.rooms===r?'on':''}" data-f="r" data-v="${r}">${r}</button>`).join('')+
-    `<button class="fbtn ${pf.sea?'on':''}" data-f="sea">🌊 Вид на море</button>`+
-    `<button class="fbtn ${pf.freeOnly?'on':''}" data-f="free">Только свободные</button>`;
-  $('#pickFilters').querySelectorAll('.fbtn').forEach(b=>b.onclick=()=>{
-    const f=b.dataset.f;
-    if(f==='all')pf.rooms=null; else if(f==='r')pf.rooms=pf.rooms===b.dataset.v?null:b.dataset.v;
-    else if(f==='sea')pf.sea=!pf.sea; else if(f==='free')pf.freeOnly=!pf.freeOnly;
-    renderPickFilters();renderChess();});
-  $('#pickLegend').innerHTML=['free','reserved','sold'].map(s=>`<div class="lg"><span class="dot ${s}"></span>${ST[s].ru}</div>`).join('');
+  const rooms=[['t_studio','t_studio'],['t_1bd','t_1bd'],['t_2bd','t_2bd']];
+  $('#pickFilters').innerHTML=`<button class="fbtn ${!pf.rooms?'on':''}" data-f="all">${t('f_all')}</button>`+
+    rooms.map(r=>`<button class="fbtn ${pf.rooms===r[0]?'on':''}" data-f="r" data-v="${r[0]}">${t(r[1])}</button>`).join('')+
+    `<button class="fbtn ${pf.sea?'on':''}" data-f="sea">${t('f_sea')}</button>`+
+    `<button class="fbtn ${pf.freeOnly?'on':''}" data-f="free">${t('f_free')}</button>`;
+  $('#pickFilters').querySelectorAll('.fbtn').forEach(b=>b.onclick=()=>{const f=b.dataset.f;
+    if(f==='all')pf.rooms=null;else if(f==='r')pf.rooms=pf.rooms===b.dataset.v?null:b.dataset.v;
+    else if(f==='sea')pf.sea=!pf.sea;else if(f==='free')pf.freeOnly=!pf.freeOnly;renderPickFilters();renderChess();});
+  $('#pickLegend').innerHTML=['free','reserved','sold'].map(s=>`<div class="lg"><span class="dot ${s}"></span>${t('st_'+s)}</div>`).join('');
 }
+function shortRooms(rk){return t(rk).split(' ')[0].slice(0,4);}
 function renderChess(){
   let rows='';const per=UT.length;
-  for(let f=FLOORS;f>=F0;f--){
-    let cells='';
-    for(let i=0;i<per;i++){const u=UNITS.find(x=>x.floor===f&&x.pos===i);
-      const vis=unitVisible(u);
-      cells+=`<div class="cell ${u.status} ${vis?'':'hide'}" ${u.status==='free'&&vis?`onclick="openUnit('${u.id}')"`:''}>
-        <span>${u.num}</span><span class="ct">${u.rooms.replace('спальн','сп').replace('Студия','Студ')}</span></div>`;}
-    rows+=`<div class="ch-row"><div class="ch-fl">${f}</div><div class="ch-cells">${cells}</div></div>`;
-  }
+  for(let f=FLOORS;f>=F0;f--){let cells='';
+    for(let i=0;i<per;i++){const u=UNITS.find(x=>x.floor===f&&x.pos===i);const vis=unitVisible(u);
+      cells+=`<div class="cell ${u.status} ${vis?'':'hide'}" ${u.status==='free'&&vis?`onclick="openUnit('${u.id}')"`:''}><span>${u.num}</span><span class="ct">${shortRooms(u.rk)}</span></div>`;}
+    rows+=`<div class="ch-row"><div class="ch-fl">${f}</div><div class="ch-cells">${cells}</div></div>`;}
   $('#chess').innerHTML=rows;
-  const vis=UNITS.filter(unitVisible);const free=vis.filter(u=>u.status==='free');
-  $('#pickCount').textContent=free.length;
-  $('#pickMin').textContent=free.length?money(Math.min(...free.map(u=>u.price))):'—';
+  const vis=UNITS.filter(unitVisible),free=vis.filter(u=>u.status==='free');
+  $('#pickCount').textContent=free.length;$('#pickMin').textContent=free.length?money(Math.min(...free.map(u=>u.price))):'—';
+  $('#pickCountLbl').textContent=t('free_lbl');
 }
 function openUnit(id){const u=UNITS.find(x=>x.id===id);if(!u)return;
-  openSheet(`<div style="font-size:11px;font-weight:600;letter-spacing:.1em;color:var(--red);text-transform:uppercase">Квартира № ${u.num}</div>
-   <h3 style="margin-top:6px">${u.rooms} · ${u.area} м²</h3>
-   <div class="uprice">${money(u.price)} <small>${u.status==='free'?'свободна':'бронь'}</small></div>
+  openSheet(`<div style="font-size:11px;font-weight:600;letter-spacing:.1em;color:var(--red);text-transform:uppercase">${t('u_apt')} ${u.num}</div>
+   <h3 style="margin-top:6px">${t(u.rk)} · ${u.area} м²</h3>
+   <div class="uprice">${money(u.price)} <small>${u.status==='free'?t('u_free'):t('u_res')}</small></div>
    <div class="uspec">
-     <div class="u"><div class="v">${u.floor}</div><div class="k">этаж</div></div>
-     <div class="u"><div class="v">${u.view==='sea'?'🌊 Море':'Город'}</div><div class="k">вид</div></div>
-     <div class="u"><div class="v">${u.area} м²</div><div class="k">площадь</div></div>
-     <div class="u"><div class="v">${money(Math.round(u.price/60/100)*100)}</div><div class="k">в месяц · 0% · 60 мес</div></div>
-   </div>
+     <div class="u"><div class="v">${u.floor}</div><div class="k">${t('u_floor')}</div></div>
+     <div class="u"><div class="v">${u.view==='sea'?t('view_sea'):t('view_city')}</div><div class="k">${t('u_view')}</div></div>
+     <div class="u"><div class="v">${u.area} м²</div><div class="k">${t('u_area')}</div></div>
+     <div class="u"><div class="v">${money(Math.round(u.price/60/100)*100)}</div><div class="k">${t('u_month')}</div></div></div>
    <div style="display:flex;gap:10px;margin-top:20px">
-     <button class="btn btn-primary" style="flex:1" onclick="openLead('Кв. ${u.num}')">Забронировать</button>
-     <button class="btn btn-ghost" style="flex:0 0 auto;padding:0 18px" onclick="shareUnit('${u.id}')" aria-label="Поделиться">
-       <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5 8.6 10.5"/></svg></button>
-   </div>
-   <p style="font-size:11px;color:var(--faint);margin-top:12px;line-height:1.5">Цена рассчитана по этажу и виду. Бронь без первоначального взноса.</p>`);
+     <button class="btn btn-primary" style="flex:1" onclick="openLead('${t('u_apt')} ${u.num}')">${t('u_book')}</button>
+     <button class="btn btn-ghost" style="flex:0 0 auto;padding:0 18px" onclick="shareUnit('${u.id}')" aria-label="share"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5 8.6 10.5"/></svg></button></div>
+   <p style="font-size:11px;color:var(--faint);margin-top:12px;line-height:1.5">${t('u_note')}</p>`);
 }
 function shareUnit(id){const u=UNITS.find(x=>x.id===id);if(!u)return;
-  const txt=`Alliance Centropolis · Квартира № ${u.num}\n${u.rooms}, ${u.area} м², ${u.floor} этаж, ${u.view==='sea'?'вид на море':'вид на город'}\n${money(u.price)} · рассрочка 0%`;
+  const txt=`Alliance Centropolis · ${t('u_apt')} ${u.num}\n${t(u.rk)}, ${u.area} м², ${u.floor} ${t('u_floor')}\n${money(u.price)}`;
   const url=location.origin+location.pathname+'?tab=apts&m=pick';
   if(navigator.share){navigator.share({title:'Alliance Centropolis',text:txt,url}).catch(()=>{});}
-  else{navigator.clipboard&&navigator.clipboard.writeText(txt+'\n'+url);
-    openSheet(`<div style="text-align:center;padding:22px 0"><div style="width:56px;height:56px;margin:0 auto 16px;border-radius:50%;background:var(--red-soft);display:grid;place-items:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></div><h3 style="text-align:center">Скопировано</h3><p style="color:var(--muted);margin-top:8px">Информация о квартире № ${u.num} скопирована — вставьте в чат.</p><button class="btn btn-ghost" style="width:100%;margin-top:20px" onclick="closeSheet()">Готово</button></div>`);}
+  else{try{navigator.clipboard&&navigator.clipboard.writeText(txt+'\n'+url)}catch(e){}
+    openSheet(`<div style="text-align:center;padding:22px 0"><div style="width:56px;height:56px;margin:0 auto 16px;border-radius:50%;background:var(--red-soft);display:grid;place-items:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></div><h3 style="text-align:center">${t('share_ok_t')}</h3><p style="color:var(--muted);margin-top:8px">${t('share_ok_p')}</p><button class="btn btn-ghost" style="width:100%;margin-top:20px" onclick="closeSheet()">${t('done')}</button></div>`);}
 }
-function aptMode(m){
-  document.querySelectorAll('#aptSeg button').forEach(b=>b.classList.toggle('on',b.dataset.m===m));
+function aptMode(m){document.querySelectorAll('#aptSeg button').forEach(b=>b.classList.toggle('on',b.dataset.m===m));
   document.getElementById('apt-types').style.display=m==='types'?'':'none';
   document.getElementById('apt-pick').style.display=m==='pick'?'':'none';
-  if(m==='pick'&&!$('#chess').innerHTML){renderPickFilters();renderChess();}
-}
-/* --- pick sub-modes: chess / facade / floor --- */
-function pickMode(p){
-  document.querySelectorAll('#pickSub button').forEach(b=>b.classList.toggle('on',b.dataset.p===p));
+  if(m==='pick'&&!$('#chess').innerHTML){renderPickFilters();renderChess();}}
+function pickMode(p){document.querySelectorAll('#pickSub button').forEach(b=>b.classList.toggle('on',b.dataset.p===p));
   ['chess','facade','floor'].forEach(m=>{const el=document.getElementById('pick-'+m);if(el)el.style.display=m===p?'':'none';});
-  const T={chess:['Шахматка','Все апартаменты по этажам. Нажмите свободную.'],
-    facade:['Фасад','Выберите квартиру прямо на здании.'],
-    floor:['План этажа','Листайте этажи и выбирайте квартиру.']};
-  $('#pickTitle').textContent=T[p][0];$('#pickDesc').textContent=T[p][1];
+  syncPickTexts();
   if(p==='facade'&&!$('#facadeWrap').innerHTML)renderFacade();
-  if(p==='floor'&&!$('#floorUnits').innerHTML)renderFloor();
-}
+  if(p==='floor'&&!$('#floorUnits').innerHTML)renderFloor();}
 const FCOL={free:'#F40146',reserved:'#D9A036',sold:'#9aa3b2'};
-function renderFacade(){
-  const cols=UT.length,rows=FLOORS-F0+1,W=300,mX=28,bodyW=W-mX*2,colW=bodyW/cols;
+function renderFacade(){const cols=UT.length,rows=FLOORS-F0+1,W=300,mX=28,bodyW=W-mX*2,colW=bodyW/cols;
   const roof=24,fH=25,baseH=44,bodyH=rows*fH,H=roof+bodyH+baseH+8;
   let s=`<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" style="max-height:62vh">`;
   s+=`<rect class="fac-body" x="${mX-6}" y="${roof-16}" width="${bodyW+12}" height="${bodyH+baseH+18}" rx="30"/>`;
   for(let r=0;r<rows;r++){const f=FLOORS-r,y=roof+r*fH;
     s+=`<text class="fac-flr" x="${mX-10}" y="${y+fH/2+3}" text-anchor="end" font-size="8.5">${f}</text>`;
-    for(let i=0;i<cols;i++){const u=UNITS.find(x=>x.floor===f&&x.pos===i);
-      const x=mX+i*colW+3,wy=y+4,ww=colW-6,wh=fH-8;
+    for(let i=0;i<cols;i++){const u=UNITS.find(x=>x.floor===f&&x.pos===i);const x=mX+i*colW+3,wy=y+4,ww=colW-6,wh=fH-8;
       const op=u.status==='free'?.92:u.status==='reserved'?.85:.4;
-      s+=`<rect class="win ${u.status}" x="${x}" y="${wy}" width="${ww}" height="${wh}" rx="3" fill="${FCOL[u.status]}" opacity="${op}" ${u.status==='free'?`onclick="openUnit('${u.id}')"`:''}></rect>`;}
-  }
-  const by=roof+bodyH;
-  s+=`<rect class="fac-base" x="${mX-6}" y="${by}" width="${bodyW+12}" height="${baseH}" rx="10"/>`;
-  s+=`<text class="fac-lbl" x="${W/2}" y="${by+baseH/2+3.5}" text-anchor="middle" font-size="9.5" font-weight="600">WORLD TRADE CENTER · HYATT CENTRIC</text>`;
-  s+=`</svg>`;
+      s+=`<rect class="win ${u.status}" x="${x}" y="${wy}" width="${ww}" height="${wh}" rx="3" fill="${FCOL[u.status]}" opacity="${op}" ${u.status==='free'?`onclick="openUnit('${u.id}')"`:''}></rect>`;}}
+  const by=roof+bodyH;s+=`<rect class="fac-base" x="${mX-6}" y="${by}" width="${bodyW+12}" height="${baseH}" rx="10"/>`;
+  s+=`<text class="fac-lbl" x="${W/2}" y="${by+baseH/2+3.5}" text-anchor="middle" font-size="9.5" font-weight="600">WORLD TRADE CENTER · HYATT CENTRIC</text></svg>`;
   $('#facadeWrap').innerHTML=s;
-  $('#facadeLegend').innerHTML=['free','reserved','sold'].map(st=>`<div class="lg"><span class="dot ${st}"></span>${ST[st].ru}</div>`).join('');
-}
-/* --- floor plan --- */
+  $('#facadeLegend').innerHTML=['free','reserved','sold'].map(st=>`<div class="lg"><span class="dot ${st}"></span>${t('st_'+st)}</div>`).join('');}
 let flState=Math.round((FLOORS+F0)/2);
-function renderFloor(){
-  const f=flState;
+function renderFloor(){const f=flState;
   $('#floorNav').innerHTML=`<button ${f<=F0?'disabled':''} onclick="floorStep(-1)"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
-    <div class="fnum"><b>${f}</b><small>этаж из ${FLOORS}</small></div>
+    <div class="fnum"><b>${f}</b><small>${t('floor_of')} ${FLOORS}</small></div>
     <button ${f>=FLOORS?'disabled':''} onclick="floorStep(1)"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>`;
   const units=UNITS.filter(u=>u.floor===f).sort((a,b)=>a.pos-b.pos);
   $('#floorUnits').innerHTML=units.map(u=>`<div class="funit ${u.status}" ${u.status==='free'?`onclick="openUnit('${u.id}')"`:''}>
-    ${u.view==='sea'?'<span class="fsea">🌊</span>':''}
-    <div class="fn">${u.num}</div><div class="fr">${u.rooms} · ${u.area} м²</div>
-    <div class="fp">${u.status==='sold'?'Продана':u.status==='reserved'?'Бронь':money(u.price)}</div></div>`).join('');
-}
+    ${u.view==='sea'?'<span class="fsea">🌊</span>':''}<div class="fn">${u.num}</div><div class="fr">${t(u.rk)} · ${u.area} м²</div>
+    <div class="fp">${u.status==='sold'?t('st_sold'):u.status==='reserved'?t('st_reserved'):money(u.price)}</div></div>`).join('');}
 function floorStep(d){flState=Math.min(FLOORS,Math.max(F0,flState+d));renderFloor();}
-/* --- construction --- */
-const CSTAGES=[['Подготовка площадки',100,'2024'],['Котлован',100,'2024'],['Фундамент',100,'2024'],
- ['Монолитный каркас',100,'2025'],['Заполнение стен',75,'III кв. 2026'],['Кровля',60,'III кв. 2026'],
- ['Фасад и витражи',50,'IV кв. 2026'],['Остекление',42,'IV кв. 2026'],['Инженерные системы',35,'I кв. 2027'],
- ['Лифты',0,'II кв. 2027'],['Отделка МОП',0,'III кв. 2027'],['Благоустройство',0,'III кв. 2027'],['Ввод в эксплуатацию',0,'IV кв. 2027']];
-const CFEED=[['08.07','Заполнение стен 9 этажа завершено'],['05.07','Электромонтаж вышел на 5 этаж'],
- ['01.07','Фасад и витражи: смонтирован 6 этаж'],['20.06','Монолитный каркас завершён — коробка готова']];
+const CSTAGES=[['cs_1',100,'2024'],['cs_2',100,'2024'],['cs_3',100,'2024'],['cs_4',100,'2025'],['cs_5',75,'III · 2026'],['cs_6',60,'III · 2026'],
+ ['cs_7',50,'IV · 2026'],['cs_8',42,'IV · 2026'],['cs_9',35,'I · 2027'],['cs_10',0,'II · 2027'],['cs_11',0,'III · 2027'],['cs_12',0,'III · 2027'],['cs_13',0,'IV · 2027']];
+const CFEED=[['08.07','cf_1'],['05.07','cf_2'],['01.07','cf_3'],['20.06','cf_4']];
 let cRendered=false;
-function renderConstruction(){
-  const overall=Math.round(CSTAGES.reduce((a,s)=>a+s[1],0)/CSTAGES.length);
+function renderConstruction(){const overall=Math.round(CSTAGES.reduce((a,s)=>a+s[1],0)/CSTAGES.length);
   $('#cStages').innerHTML=CSTAGES.map(s=>{const st=s[1]>=100?'done':s[1]>0?'active':'pending';
-    return `<div class="cstage ${st}"><span class="cdot"></span><div class="cname"><b>${s[0]}</b><span>${s[2]}</span></div><div class="cp">${s[1]}%</div></div>`;}).join('');
-  $('#cFeed').innerHTML=CFEED.map(f=>`<div class="cfeed-item"><div class="fd">${f[0]}</div><div class="ft">${f[1]}</div></div>`).join('');
-  setTimeout(()=>{$('#cBar').style.width=overall+'%';let n=0;const t=setInterval(()=>{n+=Math.ceil(overall/22);if(n>=overall){n=overall;clearInterval(t);}$('#cPct').textContent=n+'%';},30);},80);
-  cRendered=true;
-}
+    return `<div class="cstage ${st}"><span class="cdot"></span><div class="cname"><b>${t(s[0])}</b><span>${s[2]}</span></div><div class="cp">${s[1]}%</div></div>`;}).join('');
+  $('#cFeed').innerHTML=CFEED.map(f=>`<div class="cfeed-item"><div class="fd">${f[0]}</div><div class="ft">${t(f[1])}</div></div>`).join('');
+  setTimeout(()=>{$('#cBar').style.width=overall+'%';let n=0;const tm=setInterval(()=>{n+=Math.ceil(overall/22);if(n>=overall){n=overall;clearInterval(tm);}$('#cPct').textContent=n+'%';},30);},80);
+  cRendered=true;}
 
-/* deep-link для превью: ?s=sc-value|sc-app  &tab=apts|invest|construct|contact */
-try{const q=new URLSearchParams(location.search);const s=q.get('s');const tb=q.get('tab');
+/* ============ theme ============ */
+function applyTheme(th){document.documentElement.setAttribute('data-theme',th);try{localStorage.setItem('ac-theme',th)}catch(e){}
+  const ic=document.getElementById('thIcon');if(ic){ic.innerHTML=th==='dark'?'<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>':'<circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"/>';}}
+function toggleTheme(){applyTheme((document.documentElement.getAttribute('data-theme')||'light')==='light'?'dark':'light');}
+
+/* ============ INIT ============ */
+renderApts();renderGal();renderSvc();renderPoi();renderFaq();renderContacts();
+(function(){let th='light';try{th=localStorage.getItem('ac-theme')||'light'}catch(e){}applyTheme(th);
+  let lg='ru';try{lg=localStorage.getItem('ac-lang')||'ru'}catch(e){}setLang(lg);})();
+
+/* deep-link */
+try{const q=new URLSearchParams(location.search);const s=q.get('s'),tb=q.get('tab');
   if(s==='sc-app'||tb){toApp(tb||'apts');}else if(s){toScreen(s);}
   if(q.get('m'))aptMode(q.get('m'));
   if(q.get('p')){aptMode('pick');pickMode(q.get('p'));}
-  if(q.get('cur'))setCur(q.get('cur'));}catch(e){}
-
-/* ===== theme (light default) ===== */
-function applyTheme(t){document.documentElement.setAttribute('data-theme',t);
-  try{localStorage.setItem('ac-theme',t)}catch(e){}
-  const ic=document.getElementById('thIcon');
-  if(ic){ic.innerHTML = t==='dark'
-    ? '<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>'
-    : '<circle cx=\'12\' cy=\'12\' r=\'4.5\'/><path d=\'M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19\'/>';}}
-function toggleTheme(){const cur=document.documentElement.getAttribute('data-theme')||'light';applyTheme(cur==='light'?'dark':'light');}
-(function(){let t='light';try{t=localStorage.getItem('ac-theme')||'light'}catch(e){}applyTheme(t);})();
+  if(q.get('cur'))setCur(q.get('cur'));
+  if(q.get('lang'))setLang(q.get('lang'));}catch(e){}
 
 </script>
 </body>
